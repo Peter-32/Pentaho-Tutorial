@@ -1,0 +1,24 @@
+Get a project idea:
+DAY 1: Get some basic functionality working
+Learn basics of Python
+Make mistakes
+
+DAY 2: Complete functionality (if it grows too big, cut scope)
+Refactor as you need (fix the code and make it pretty)
+Eliminate bugs (Have to be bug free by end of day 2)
+
+Day 3: Complete documentation
+Refactor
+Push to online Repository
+
+Never touch the project again.
+
+------------------------------------
+
+Phone interviews: coderbyte.com helps prepare.
+Use stack overflow, python: read about decorators and generators
+
+Python: everything is an object
+
+Use python mock library to write pure unit tests on your code base.
+If you're able to do this you have above beginner understanding

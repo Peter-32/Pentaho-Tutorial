@@ -1,0 +1,3281 @@
+<!doctype html>
+<html lang="en" ng-app="championPage"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="LoL Statistics, Builds, Runes, Masteries, Skill Orders, Counters and Matchups for Blitzcrank when played Support. Statistics include Blitzcrank&#39;s Win Rate, Play Rate and Ban Rate. Counters include who Blitzcrank Support is Strong or Weak Against.">
+  <title>Champion.gg - Blitzcrank Support Stats, Builds, Runes, Masteries and Counters</title>
+  <!-- Bootstrap core CSS -->
+  <link href="/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+    <link href="/css/master.min.css?v=6.9.10.394612" rel="stylesheet">
+  
+  
+  <script>
+  var _prum = [['id', '57277832abe53de9428062df'],
+             ['mark', 'firstbyte', (new Date()).getTime()]];
+  (function() {
+    var s = document.getElementsByTagName('script')[0]
+      , p = document.createElement('script');
+    p.async = 'async';
+    p.src = '//rum-static.pingdom.net/prum.min.js';
+    s.parentNode.insertBefore(p, s);
+  })();
+  </script>
+  <script>
+  var matchupData = {};
+  </script>
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  
+  
+    
+    <script type='text/javascript'>
+      var googletag = googletag || {};
+      googletag.cmd = googletag.cmd || [];
+      (function() {
+        var gads = document.createElement('script');
+        gads.async = true;
+        gads.type = 'text/javascript';
+        var useSSL = 'https:' == document.location.protocol;
+        gads.src = (useSSL ? 'https:' : 'http:') +
+          '//www.googletagservices.com/tag/js/gpt.js';
+        var node = document.getElementsByTagName('script')[0];
+        node.parentNode.insertBefore(gads, node);
+      })();
+    </script>
+
+    <script type='text/javascript'>
+      googletag.cmd.push(function() {
+        googletag.defineSlot('/22280732/ChampionGG_1x1_ROS_Wallpaper', [1, 1], 'div-gpt-ad-1443488528500-0').addService(googletag.pubads());
+        googletag.defineSlot('/22280732/ChampionGG_728x90_Champion_ATF1', [[320, 50], [320, 100], [970, 90], [970, 250], [728, 90]], 'div-gpt-ad-1443727656867-0').addService(googletag.pubads());
+        googletag.defineSlot('/22280732/ChampionGG_300x250_Champion_ATF1', [[300, 250], [300, 600], [300, 1050], [336, 280]], 'div-gpt-ad-1443488528500-1').addService(googletag.pubads());
+        googletag.defineSlot('/22280732/ChampionGG_300x250_Champion_BTF1', [[300, 250], [300, 600], [300, 1050], [336, 280]], 'div-gpt-ad-1443488528500-2').addService(googletag.pubads());
+        googletag.defineSlot('/22280732/ChampionGG_300x250_Champion_BTF2', [[300, 250], [300, 600], [300, 1050], [336, 280]], 'div-gpt-ad-1443488528500-3').addService(googletag.pubads());
+        googletag.pubads().enableSingleRequest();
+        googletag.pubads().collapseEmptyDivs();
+        googletag.enableServices();
+      });
+    </script>
+  
+  
+</head>
+<body>
+  <div class="primary-hue">
+    <div class="main-container">
+      <div class="navigation-elem">
+        <div class="inner-nav clearfix">
+          <ul class="nav navbar-nav">
+            <li class="first-button "><a href="/">Home</a></li>
+            <li class=""><a href="/statistics/">Statistics</a></li>
+            <li class=""><a href="/faq/">F.A.Q.</a></li>
+          </ul>
+          
+          <div class="social-media">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-via="champion_gg">Tweet</a>
+            <div class="fb-like" data-href="https://www.facebook.com/championgg" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+          </div>
+          <div class="update-happening">
+            
+             <span class="important-message"> We are currently aggregating patch 6.10 data - check back in 2 days! </span>
+            
+          </div>
+        </div>
+      </div>
+      <div class="navbar navbar-inverse" role="navigation">
+        <div class="container-fluid">
+         <div class="row clearfix">
+            <div class="logo-holder">
+            <a class="navbar-brand" href="/"><img src="/img/logo.png" /></a>
+          </div>
+          <div class="search-holder">
+            
+            <div class="search-fb-holder">
+              <div class="input-group" ng-controller="searchCtrl">
+
+                <input type="text" class="form-control" placeholder="Champion Name" id="query" value="" ng-model="selected" ng-model-options="{debounce: 40}" typeahead="champ as champ.name for champ in championMenu | startsWith:$viewValue | limitTo: 12" typeahead-template-url="menu.html" style="width:188px;display: inline-block;" ng-keyup="determineSend($event.keyCode)" autocomplete="off">
+                <div class="input-group-btn" style="cursor:auto;display: inline-block;">  
+                  <button ng-click="getPage()" style="cursor:auto;" type="submit" class="btn btn-success"><span style="cursor:auto;" class="glyphicon glyphicon-search" ></span></button>
+                </div>
+              
+              </div>
+            </div>
+            
+          </div>
+          <div class="navigation-holder cleafix">
+            <!--<a class="donate" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=championgg%40outlook%2ecom&lc=AU&item_name=ChampionGG&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted" alt="donate"> Donate </a>-->
+            <div class="analysis-holder">
+              <small>
+                Patch 
+                <strong>6.9</strong> 
+                <span class="spacer">|</span> 
+                Champions Analyzed 
+                <strong>3,202,760</strong>
+                <span class="spacer">|</span> 
+                <strong> Platinum+ Ranked </strong>
+              </small> 
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page-content">
+
+
+    <div style="text-align:center">
+    
+      <!-- /22280732/ChampionGG_728x90_Champion_ATF1 -->
+      <div id='div-gpt-ad-1443727656867-0'>
+      <script type='text/javascript'>
+      googletag.cmd.push(function() { googletag.display('div-gpt-ad-1443727656867-0'); });
+      </script>
+      </div>
+    
+    </div>
+    
+    
+    <noscript><div class="update-happening">To make the most of this website, we strongly recommend turning JavaScript on! It powers the graphs, data sorting and other cool features!</div></noscript>
+
+
+<div ng-controller="generalChampion">
+  <div class="champion-area" ng-controller="championData">
+    <div class="container-fluid">
+      <div class="row">
+
+        <div class="col-xs-12 col-sm-3 col-md-2 champion-profile">
+          <img src="//ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Blitzcrank.png" class="champ-img"/>
+<h1>Blitzcrank</h1>
+<ul>
+
+  
+  <li  class="selected-role">
+    <a href="/champion/Blitzcrank/Support">
+      <h3>
+        Support
+      </h3>
+    </a>
+    <small> 91.99% Role Rate </small>
+    <small style="display:block"> 51593 Analyzed This Patch </small>
+  </li>
+  
+  
+  
+</ul>
+        </div>
+
+        <div class="col-xs-12 col-sm-9 col-md-4 champion-statistics">
+          <h2 style="margin-bottom:8px">Statistics</h2>
+<table class="table table-striped">
+  <thead>
+    <tr >
+      <th class="first-column"><span class="text-indent">Type</span></th>
+      <th class="second-column">Average</th>
+      <th class="third-column"><span class="glyphicon glyphicon-question-sign" tooltip="Blitzcrank's ranking compared to other Support champions."></span> Role Placement</th>
+      <th class="fourth-column">Placement Change this patch</th>
+    </tr>
+  </thead>
+  <tbody>
+   
+   <tr id=statistics-win-rate-row >
+    <td>
+      <a href="/statistics/#?roleSort=Support&sortBy=general.winPercent&order=descend">
+        Win Rate
+      </a>
+    </td>
+
+    <td>53.19%</td>
+    <td>  
+      <strong class=" top-half ">
+        1 
+      </strong>
+      <small>/ 27</small>
+    </td>
+    <td>
+      <span class="glyphicon  glyphicon-arrow-up   ">
+      </span>
+      3</td>
+    </tr>
+
+    
+   <tr id=statistics-play-rate-row >
+    <td>
+      <a href="/statistics/#?roleSort=Support&sortBy=general.playPercent&order=descend">
+        Play Rate
+      </a>
+    </td>
+
+    <td>16.1%</td>
+    <td>  
+      <strong class=" top-half ">
+        3 
+      </strong>
+      <small>/ 27</small>
+    </td>
+    <td>
+      <span class="glyphicon  glyphicon-arrow-up   ">
+      </span>
+      2</td>
+    </tr>
+
+    
+   <tr id=statistics-ban-rate-row >
+    <td>
+      <a href="/statistics/#?roleSort=Support&sortBy=general.banRate&order=descend">
+        Ban Rate
+      </a>
+    </td>
+
+    <td>2.8%</td>
+    <td>  
+      <strong class=" top-half ">
+        12 
+      </strong>
+      <small>/ 27</small>
+    </td>
+    <td>
+      <span class="glyphicon   glyphicon-arrow-down  ">
+      </span>
+      3</td>
+    </tr>
+
+    
+   <tr id=statistics-playerbase-average games played-row >
+    <td>
+      <a href="/statistics/#?roleSort=Support&sortBy=general.experience&order=descend">
+        Playerbase Average Games Played
+      </a>
+    </td>
+
+    <td>67.94</td>
+    <td>  
+      <strong class=" top-half ">
+        9 
+      </strong>
+      <small>/ 27</small>
+    </td>
+    <td>
+      <span class="glyphicon    same-position ">
+      </span>
+      0</td>
+    </tr>
+
+    
+   <tr id=statistics-gold-earned-row >
+    <td>
+      <a href="/statistics/#?roleSort=Support&sortBy=general.goldEarned&order=descend">
+        Gold Earned
+      </a>
+    </td>
+
+    <td>9689</td>
+    <td>  
+      <strong class=" bottom-half ">
+        18 
+      </strong>
+      <small>/ 27</small>
+    </td>
+    <td>
+      <span class="glyphicon   glyphicon-arrow-down  ">
+      </span>
+      1</td>
+    </tr>
+
+    
+   <tr id=statistics-assists-row >
+    <td>
+      <a href="/statistics/#?roleSort=Support&sortBy=general.assists&order=descend">
+        Assists
+      </a>
+    </td>
+
+    <td>13</td>
+    <td>  
+      <strong class=" bottom-half ">
+        16 
+      </strong>
+      <small>/ 27</small>
+    </td>
+    <td>
+      <span class="glyphicon   glyphicon-arrow-down  ">
+      </span>
+      1</td>
+    </tr>
+
+    
+   <tr id=statistics-deaths-row >
+    <td>
+      <a href="/statistics/#?roleSort=Support&sortBy=general.deaths&order=descend">
+        Deaths
+      </a>
+    </td>
+
+    <td>5.63</td>
+    <td>  
+      <strong class=" top-half ">
+        12 
+      </strong>
+      <small>/ 27</small>
+    </td>
+    <td>
+      <span class="glyphicon    same-position ">
+      </span>
+      0</td>
+    </tr>
+
+    
+   <tr id=statistics-kills-row >
+    <td>
+      <a href="/statistics/#?roleSort=Support&sortBy=general.kills&order=descend">
+        Kills
+      </a>
+    </td>
+
+    <td>2.43</td>
+    <td>  
+      <strong class=" bottom-half ">
+        14 
+      </strong>
+      <small>/ 27</small>
+    </td>
+    <td>
+      <span class="glyphicon    same-position ">
+      </span>
+      0</td>
+    </tr>
+
+    
+   <tr id=statistics-heal-row >
+    <td>
+      <a href="/statistics/#?roleSort=Support&sortBy=general.totalHeal&order=descend">
+        Heal
+      </a>
+    </td>
+
+    <td>3474.25</td>
+    <td>  
+      <strong class=" bottom-half ">
+        14 
+      </strong>
+      <small>/ 27</small>
+    </td>
+    <td>
+      <span class="glyphicon  glyphicon-arrow-up   ">
+      </span>
+      1</td>
+    </tr>
+
+    
+   <tr id=statistics-pink-wards bought-row >
+    <td>
+      <a href="/statistics/#?roleSort=Support&sortBy=general.visionWardsBoughtInGame&order=descend">
+        Pink Wards Bought
+      </a>
+    </td>
+
+    <td>2.39</td>
+    <td>  
+      <strong class=" bottom-half ">
+        14 
+      </strong>
+      <small>/ 27</small>
+    </td>
+    <td>
+      <span class="glyphicon  glyphicon-arrow-up   ">
+      </span>
+      1</td>
+    </tr>
+
+    
+   <tr id=statistics-wards-placed-row >
+    <td>
+      <a href="/statistics/#?roleSort=Support&sortBy=general.wardsPlaced&order=descend">
+        Wards Placed
+      </a>
+    </td>
+
+    <td>23.3</td>
+    <td>  
+      <strong class=" top-half ">
+        6 
+      </strong>
+      <small>/ 27</small>
+    </td>
+    <td>
+      <span class="glyphicon   glyphicon-arrow-down  ">
+      </span>
+      1</td>
+    </tr>
+
+    
+   <tr id=statistics-wards-killed-row >
+    <td>
+      <a href="/statistics/#?roleSort=Support&sortBy=general.wardsKilled&order=descend">
+        Wards Killed
+      </a>
+    </td>
+
+    <td>4.63</td>
+    <td>  
+      <strong class=" bottom-half ">
+        18 
+      </strong>
+      <small>/ 27</small>
+    </td>
+    <td>
+      <span class="glyphicon   glyphicon-arrow-down  ">
+      </span>
+      1</td>
+    </tr>
+
+    
+   <tr id=statistics-damage-dealt-row >
+    <td>
+      <a href="/statistics/#?roleSort=Support&sortBy=general.totalDamageDealtToChampions&order=descend">
+        Damage Dealt
+      </a>
+    </td>
+
+    <td>10015</td>
+    <td>  
+      <strong class=" bottom-half ">
+        15 
+      </strong>
+      <small>/ 27</small>
+    </td>
+    <td>
+      <span class="glyphicon    same-position ">
+      </span>
+      0</td>
+    </tr>
+
+    
+
+    <tr>
+      <td colspan=2> <a href="/statistics/#?roleSort=Support&sortBy=general.overallPosition&order=ascend">Overall Placement</a></td>
+      <td style="text-align:center"><strong class=" top-half ">5 </strong><small>/ 27</small></td>
+      <td><span class="glyphicon  glyphicon-arrow-up   ">
+      </span> 1</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<h2>Overall Champion Matrix</h2>
+<div class="chart-holder" style="max-width:310px">
+  <canvas tc-chartjs-radar chart-data="overallComparison.data" chart-options="overallComparison.settings" chart-legend="generalComparison" id="canvas2" height="242" width="339"></canvas>
+</div>
+<div tc-chartjs-legend chart-legend="generalComparison"></div>
+        </div>
+
+        <div class="col-xxs-12 col-xs-6 col-sm-6 col-md-3">
+          <h2 class="line-chart-header">Win Rate % By Patch</h2>
+<div class="chart-holder">
+  <canvas tc-chartjs-line chart-data="patchRate.data" chart-options="patchRate.settings" id="canvas3" height="150" width="300"></canvas>
+</div>
+<div tc-chartjs-legend chart-legend="playRate"></div>
+<h2 class="line-chart-header">Play Rate % By Patch</h2>
+<div class="chart-holder">
+  <canvas tc-chartjs-line chart-data="patchPlay.data" chart-options="patchPlay.settings" chart-legend="playRate" id="canvas" height="150" width="300"></canvas>
+</div>
+<div tc-chartjs-legend chart-legend="playRate"></div>
+<div class="center-google">
+  <!-- /22280732/ChampionGG_300x250_Champion_ATF1 -->
+  <div id='div-gpt-ad-1443488528500-1'>
+  <script type='text/javascript'>
+  googletag.cmd.push(function() { googletag.display('div-gpt-ad-1443488528500-1'); });
+  </script>
+  </div>
+</div>
+
+<h2 class="champion-stats">Damage Composition</h2>
+<div class="clearfix middle-graphic-holder damage-dealt">
+  <div class="physical-dmg" tooltip="29.2% Physical" style="width:29.2%"></div>
+  <div class="magic-dmg" tooltip="66.8% Magic" style="left:29.2%;width:66.8%"></div>
+  <div class="true-dmg" tooltip="4% True" style="right:0;width:4%"></div>
+</div>
+<ul class="radar-legend" style="margin-bottom:20px">
+  <li><span class="physical-dmg"></span>Physical</li>
+  <li><span class="magic-dmg"></span>Magic</li>
+  <li><span class="true-dmg"></span>True</li>
+</ul>
+
+<div class="trinket-stats">
+  <h2 class="champion-stats">Trinket Stats</h2>
+  
+  
+    <div style="width:33%;float:left;text-align:center">
+      <img class="possible-build" src="//ddragon.leagueoflegends.com/cdn/6.9.1/img/item/3340.png" tooltip="Warding Totem (Trinket)"/>
+      <div class="build-text">
+        <strong style="display:block">53.25%</strong>
+        Win Rate
+        <strong style="display:block;margin-top:10px">49601</strong> 
+        Games </div>
+    </div>        
+  
+    <div style="width:33%;float:left;text-align:center">
+      <img class="possible-build" src="//ddragon.leagueoflegends.com/cdn/6.9.1/img/item/3341.png" tooltip="Sweeping Lens (Trinket)"/>
+      <div class="build-text">
+        <strong style="display:block">50.76%</strong>
+        Win Rate
+        <strong style="display:block;margin-top:10px">130</strong> 
+        Games </div>
+    </div>        
+  
+ 
+</div>
+
+        </div>
+
+        <div class="col-xxs-12 col-xs-6 col-sm-6 col-md-3">
+           <h2 class="line-chart-header">Win Rate % by Game Length</h2> 
+ <div class="chart-holder">
+   <canvas tc-chartjs-line chart-data="gameLength.data" chart-options="gameLength.settings" id="canvas" height="150" width="300"></canvas>
+ </div>
+ <div tc-chartjs-legend chart-legend="playRate"></div>
+<h2 class="line-chart-header">
+  Win Rate % by Games Played 
+  <small style="display:block;margin-top: 10px;">(2014-2015 Ranked Experience)</small>
+</h2> 
+<div class="chart-holder">
+  <canvas tc-chartjs-line chart-data="experienceRate.data" chart-options="experienceRate.settings" chart-legend="experienceRate" id="canvas" height="150" width="300"></canvas>
+</div>
+<div tc-chartjs-legend chart-legend="experienceRate"></div>
+
+<h2 class="line-chart-header" style="margin-bottom: 20px;">Playerbase Experience Distribution</h2> 
+<div class="chart-holder clearfix">
+  <div style="width:65%;float:left">
+    <canvas tc-chartjs-pie chart-data="experienceDistribution.data.datasets" chart-options="experienceDistribution.settings" chart-legend="experienceDist" id="canvas" height="220" width="300" ></canvas>
+  </div>
+  <div style="width:35%;float:left">
+    <small style="display: block;margin-bottom:10px">2014-2015 Ranked Games</small>
+    <div tc-chartjs-legend chart-legend="experienceDist"></div>
+  </div>
+</div>
+
+ <h2 class="champion-stats">Most Frequent Summoners</h2>
+ <div class="summoner-wrapper">
+  <a href="http://leagueoflegends.wikia.com/wiki/Exhaust" rel="nofollow" target="_blank"><img src="//ddragon.leagueoflegends.com/cdn/6.9.1/img/spell/SummonerExhaust.png" class="possible-build" tooltip="Exhaust"/></a>
+  
+  <a href="http://leagueoflegends.wikia.com/wiki/Flash" rel="nofollow" target="_blank"><img src="//ddragon.leagueoflegends.com/cdn/6.9.1/img/spell/SummonerFlash.png" class="possible-build" tooltip="Flash"/></a>                 
+  <div class="summoner-text"><strong>52.03%</strong> Win Rate | <strong>27799</strong> Games</div>
+</div>
+
+<h2 class="champion-stats">Highest Win % Summoners</h2>
+<div class="summoner-wrapper">
+  <a href="http://leagueoflegends.wikia.com/wiki/Flash" rel="nofollow" target="_blank"><img src="//ddragon.leagueoflegends.com/cdn/6.9.1/img/spell/SummonerFlash.png" class="possible-build" tooltip="Flash"/></a> 
+  <a href="http://leagueoflegends.wikia.com/wiki/Ignite" rel="nofollow" target="_blank"><img src="//ddragon.leagueoflegends.com/cdn/6.9.1/img/spell/SummonerDot.png" class="possible-build" tooltip="Ignite"/></a>                
+  <div class="summoner-text"><strong>54.74%</strong> Win Rate | <strong>23116</strong> Games</div>
+</div>
+       </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="champion-area">
+    <div class="container-fluid">
+
+      <div class="row">
+
+        <div class="col-xs-12 col-sm-12 col-md-6">
+          <div>
+            
+              <h2 class="champion-stats">Most Frequent Skill Order</h2>
+<div class="skill-order clearfix">
+  <div class="skill">
+    <div class="img-placeholder"></div>
+    <div class="skill-selections">
+      
+      <div>
+        <span>1</span>
+      </div>
+      
+      <div>
+        <span>2</span>
+      </div>
+      
+      <div>
+        <span>3</span>
+      </div>
+      
+      <div>
+        <span>4</span>
+      </div>
+      
+      <div>
+        <span>5</span>
+      </div>
+      
+      <div>
+        <span>6</span>
+      </div>
+      
+      <div>
+        <span>7</span>
+      </div>
+      
+      <div>
+        <span>8</span>
+      </div>
+      
+      <div>
+        <span>9</span>
+      </div>
+      
+      <div>
+        <span>10</span>
+      </div>
+      
+      <div>
+        <span>11</span>
+      </div>
+      
+      <div>
+        <span>12</span>
+      </div>
+      
+      <div>
+        <span>13</span>
+      </div>
+      
+      <div>
+        <span>14</span>
+      </div>
+      
+      <div>
+        <span>15</span>
+      </div>
+      
+      <div>
+        <span>16</span>
+      </div>
+      
+      <div>
+        <span>17</span>
+      </div>
+      
+      <div>
+        <span>18</span>
+      </div>
+      
+    </div>
+  </div>
+  
+  <div class="skill">
+    <img src="//ddragon.leagueoflegends.com/cdn/6.9.1/img/spell/RocketGrab.png" tooltip="Rocket Grab"/>
+    <div class="skill-selections">
+      
+      
+      <div class="selected">
+        <span>Q</span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="selected">
+        <span>Q</span>
+        
+      </div>
+      
+      <div class="selected">
+        <span>Q</span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="selected">
+        <span>Q</span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="selected">
+        <span>Q</span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+    </div>
+  </div>
+  
+  <div class="skill">
+    <img src="//ddragon.leagueoflegends.com/cdn/6.9.1/img/spell/Overdrive.png" tooltip="Overdrive"/>
+    <div class="skill-selections">
+      
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="selected">
+        <span>W</span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="selected">
+        <span>W</span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="selected">
+        <span>W</span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="selected">
+        <span>W</span>
+        
+      </div>
+      
+      <div class="selected">
+        <span>W</span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+    </div>
+  </div>
+  
+  <div class="skill">
+    <img src="//ddragon.leagueoflegends.com/cdn/6.9.1/img/spell/PowerFist.png" tooltip="Power Fist"/>
+    <div class="skill-selections">
+      
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="selected">
+        <span>E</span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="selected">
+        <span>E</span>
+        
+      </div>
+      
+      <div class="selected">
+        <span>E</span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="selected">
+        <span>E</span>
+        
+      </div>
+      
+      <div class="selected">
+        <span>E</span>
+        
+      </div>
+      
+    </div>
+  </div>
+  
+  <div class="skill">
+    <img src="//ddragon.leagueoflegends.com/cdn/6.9.1/img/spell/StaticField.png" tooltip="Static Field"/>
+    <div class="skill-selections">
+      
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="selected">
+        <span>R</span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="selected">
+        <span>R</span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="selected">
+        <span>R</span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+<div class="build-text">
+  <strong>53.76%</strong> Win Rate | <strong>17167</strong> Games
+</div>
+
+
+<h2 class="champion-stats" style="margin-top:55px">Highest Win % Skill Order</h2>
+<div class="skill-order clearfix">
+  <div class="skill">
+    <div class="img-placeholder"></div>
+    <div class="skill-selections">
+      
+      <div>
+        <span>1</span>
+      </div>
+      
+      <div>
+        <span>2</span>
+      </div>
+      
+      <div>
+        <span>3</span>
+      </div>
+      
+      <div>
+        <span>4</span>
+      </div>
+      
+      <div>
+        <span>5</span>
+      </div>
+      
+      <div>
+        <span>6</span>
+      </div>
+      
+      <div>
+        <span>7</span>
+      </div>
+      
+      <div>
+        <span>8</span>
+      </div>
+      
+      <div>
+        <span>9</span>
+      </div>
+      
+      <div>
+        <span>10</span>
+      </div>
+      
+      <div>
+        <span>11</span>
+      </div>
+      
+      <div>
+        <span>12</span>
+      </div>
+      
+      <div>
+        <span>13</span>
+      </div>
+      
+      <div>
+        <span>14</span>
+      </div>
+      
+      <div>
+        <span>15</span>
+      </div>
+      
+      <div>
+        <span>16</span>
+      </div>
+      
+      <div>
+        <span>17</span>
+      </div>
+      
+      <div>
+        <span>18</span>
+      </div>
+      
+    </div>
+  </div>
+  
+  <div class="skill">
+    <img src="//ddragon.leagueoflegends.com/cdn/6.9.1/img/spell/RocketGrab.png" tooltip="Rocket Grab"/>
+    <div class="skill-selections">
+      
+      
+      <div class="selected">
+        <span>Q</span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="selected">
+        <span>Q</span>
+        
+      </div>
+      
+      <div class="selected">
+        <span>Q</span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="selected">
+        <span>Q</span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="selected">
+        <span>Q</span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+    </div>
+  </div>
+  
+  <div class="skill">
+    <img src="//ddragon.leagueoflegends.com/cdn/6.9.1/img/spell/Overdrive.png" tooltip="Overdrive"/>
+    <div class="skill-selections">
+      
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="selected">
+        <span>W</span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="selected">
+        <span>W</span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="selected">
+        <span>W</span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="selected">
+        <span>W</span>
+        
+      </div>
+      
+      <div class="selected">
+        <span>W</span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+    </div>
+  </div>
+  
+  <div class="skill">
+    <img src="//ddragon.leagueoflegends.com/cdn/6.9.1/img/spell/PowerFist.png" tooltip="Power Fist"/>
+    <div class="skill-selections">
+      
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="selected">
+        <span>E</span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="selected">
+        <span>E</span>
+        
+      </div>
+      
+      <div class="selected">
+        <span>E</span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="selected">
+        <span>E</span>
+        
+      </div>
+      
+      <div class="selected">
+        <span>E</span>
+        
+      </div>
+      
+    </div>
+  </div>
+  
+  <div class="skill">
+    <img src="//ddragon.leagueoflegends.com/cdn/6.9.1/img/spell/StaticField.png" tooltip="Static Field"/>
+    <div class="skill-selections">
+      
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="selected">
+        <span>R</span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="selected">
+        <span>R</span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="selected">
+        <span>R</span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+      <div class="">
+        <span></span>
+        
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+<div class="build-text">
+  <strong> 53.76%</strong> Win Rate | <strong>17167</strong> Games
+</div>
+            
+          </div>
+          <div>
+             
+              <h2 class="champion-stats" style="margin-top:40px">Most Frequent Runes</h2>
+<div class="rune-collection">
+  
+  <div class="rune-type-area" style="width:98%">
+    <div class="rune-img">
+      <img src="//ddragon.leagueoflegends.com/cdn/6.9.1/img/rune/r_1_3.png" /> <strong>9x</strong> <span class="rune-title">Greater Mark of Magic Penetration </span>
+      <span class="rune-benefits"><small>+0.87 magic penetration</small></span>
+    </div>
+    <div class="rune-info">
+    </div>
+  </div>
+  
+  <div class="rune-type-area" style="width:98%">
+    <div class="rune-img">
+      <img src="//ddragon.leagueoflegends.com/cdn/6.9.1/img/rune/b_3_3.png" /> <strong>9x</strong> <span class="rune-title">Greater Glyph of Magic Resist </span>
+      <span class="rune-benefits"><small>+1.34 magic resist</small></span>
+    </div>
+    <div class="rune-info">
+    </div>
+  </div>
+  
+  <div class="rune-type-area" style="width:98%">
+    <div class="rune-img">
+      <img src="//ddragon.leagueoflegends.com/cdn/6.9.1/img/rune/y_1_3.png" /> <strong>9x</strong> <span class="rune-title">Greater Seal of Armor </span>
+      <span class="rune-benefits"><small>+1 armor</small></span>
+    </div>
+    <div class="rune-info">
+    </div>
+  </div>
+  
+  <div class="rune-type-area" style="width:98%">
+    <div class="rune-img">
+      <img src="//ddragon.leagueoflegends.com/cdn/6.9.1/img/rune/bl_3_3.png" /> <strong>3x</strong> <span class="rune-title">Greater Quintessence of Ability Power </span>
+      <span class="rune-benefits"><small>+4.95 ability power</small></span>
+    </div>
+    <div class="rune-info">
+    </div>
+  </div>
+  
+</div>
+<div class="build-text">
+  <strong>52.47%</strong> Win Rate | <strong>3278</strong> Games
+</div>
+
+
+<h2 class="champion-stats" style="margin-top:45px">Highest Win % Runes</h2>
+<div class="rune-collection">
+  
+  <div class="rune-type-area" style="width:98%">
+    <div class="rune-img">
+      <img src="//ddragon.leagueoflegends.com/cdn/6.9.1/img/rune/r_1_3.png" /> <strong>9x</strong> <span class="rune-title">Greater Mark of Armor </span>
+      <span class="rune-benefits"><small>+0.91 armor</small></span>
+    </div>
+    <div class="rune-info">
+    </div>
+  </div>
+  
+  <div class="rune-type-area" style="width:98%">
+    <div class="rune-img">
+      <img src="//ddragon.leagueoflegends.com/cdn/6.9.1/img/rune/b_3_3.png" /> <strong>9x</strong> <span class="rune-title">Greater Glyph of Magic Resist </span>
+      <span class="rune-benefits"><small>+1.34 magic resist</small></span>
+    </div>
+    <div class="rune-info">
+    </div>
+  </div>
+  
+  <div class="rune-type-area" style="width:98%">
+    <div class="rune-img">
+      <img src="//ddragon.leagueoflegends.com/cdn/6.9.1/img/rune/y_1_3.png" /> <strong>9x</strong> <span class="rune-title">Greater Seal of Armor </span>
+      <span class="rune-benefits"><small>+1 armor</small></span>
+    </div>
+    <div class="rune-info">
+    </div>
+  </div>
+  
+  <div class="rune-type-area" style="width:98%">
+    <div class="rune-img">
+      <img src="//ddragon.leagueoflegends.com/cdn/6.9.1/img/rune/bl_3_3.png" /> <strong>3x</strong> <span class="rune-title">Greater Quintessence of Movement Speed </span>
+      <span class="rune-benefits"><small>+1.5% movement speed</small></span>
+    </div>
+    <div class="rune-info">
+    </div>
+  </div>
+  
+</div>
+<div class="build-text">
+  <strong>57.68%</strong> Win Rate | <strong>475</strong> Games
+</div>
+             
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-6">
+          <div class="row" style="margin-top:0px">  
+            <div class="col-xs-12 col-sm-12 col-md-7">
+              
+                <h2 class="champion-stats">Most Frequent Core Build</h2>
+<div class="build-wrapper">
+  
+    <a href="http://leagueoflegends.wikia.com/wiki/Sightstone" rel="nofollow" target="_blank">
+      <img src="//ddragon.leagueoflegends.com/cdn/6.9.1/img/item/2049.png" class="possible-build" tooltip="Sightstone"/>
+    </a>
+    
+     <small>></small> 
+    
+  
+    <a href="http://leagueoflegends.wikia.com/wiki/Boots of Mobility" rel="nofollow" target="_blank">
+      <img src="//ddragon.leagueoflegends.com/cdn/6.9.1/img/item/3117.png" class="possible-build" tooltip="Boots of Mobility"/>
+    </a>
+    
+     <small>></small> 
+    
+  
+    <a href="http://leagueoflegends.wikia.com/wiki/Face of the Mountain" rel="nofollow" target="_blank">
+      <img src="//ddragon.leagueoflegends.com/cdn/6.9.1/img/item/3401.png" class="possible-build" tooltip="Face of the Mountain"/>
+    </a>
+    
+     <small>></small> 
+    
+  
+    <a href="http://leagueoflegends.wikia.com/wiki/Locket of the Iron Solari" rel="nofollow" target="_blank">
+      <img src="//ddragon.leagueoflegends.com/cdn/6.9.1/img/item/3190.png" class="possible-build" tooltip="Locket of the Iron Solari"/>
+    </a>
+    
+     <small>></small> 
+    
+  
+    <a href="http://leagueoflegends.wikia.com/wiki/Frozen Heart" rel="nofollow" target="_blank">
+      <img src="//ddragon.leagueoflegends.com/cdn/6.9.1/img/item/3110.png" class="possible-build" tooltip="Frozen Heart"/>
+    </a>
+    
+     <small>></small> 
+    
+  
+    <a href="http://leagueoflegends.wikia.com/wiki/Guardian Angel" rel="nofollow" target="_blank">
+      <img src="//ddragon.leagueoflegends.com/cdn/6.9.1/img/item/3026.png" class="possible-build" tooltip="Guardian Angel"/>
+    </a>
+    
+  
+  <div class="build-text">
+    <strong>51.07%</strong> Win Rate | <strong>2684</strong> Games 
+  </div>
+</div>
+
+<h2 class="champion-stats"  style="margin-top:40px">Highest Win % Core Build</h2>
+<div class="build-wrapper">
+  
+    <a href="http://leagueoflegends.wikia.com/wiki/Boots of Swiftness" rel="nofollow" target="_blank">
+      <img src="//ddragon.leagueoflegends.com/cdn/6.9.1/img/item/3009.png" class="possible-build" tooltip="Boots of Swiftness"/>
+    </a>
+    
+      <small>></small>
+    
+  
+    <a href="http://leagueoflegends.wikia.com/wiki/Sightstone" rel="nofollow" target="_blank">
+      <img src="//ddragon.leagueoflegends.com/cdn/6.9.1/img/item/2049.png" class="possible-build" tooltip="Sightstone"/>
+    </a>
+    
+      <small>></small>
+    
+  
+    <a href="http://leagueoflegends.wikia.com/wiki/Face of the Mountain" rel="nofollow" target="_blank">
+      <img src="//ddragon.leagueoflegends.com/cdn/6.9.1/img/item/3401.png" class="possible-build" tooltip="Face of the Mountain"/>
+    </a>
+    
+      <small>></small>
+    
+  
+    <a href="http://leagueoflegends.wikia.com/wiki/Locket of the Iron Solari" rel="nofollow" target="_blank">
+      <img src="//ddragon.leagueoflegends.com/cdn/6.9.1/img/item/3190.png" class="possible-build" tooltip="Locket of the Iron Solari"/>
+    </a>
+    
+      <small>></small>
+    
+  
+    <a href="http://leagueoflegends.wikia.com/wiki/Mikael&#39;s Crucible" rel="nofollow" target="_blank">
+      <img src="//ddragon.leagueoflegends.com/cdn/6.9.1/img/item/3222.png" class="possible-build" tooltip="Mikael&#39;s Crucible"/>
+    </a>
+    
+      <small>></small>
+    
+  
+    <a href="http://leagueoflegends.wikia.com/wiki/Guardian Angel" rel="nofollow" target="_blank">
+      <img src="//ddragon.leagueoflegends.com/cdn/6.9.1/img/item/3026.png" class="possible-build" tooltip="Guardian Angel"/>
+    </a>
+    
+  
+  <div class="build-text">
+    <strong>55.32%</strong> Win Rate | <strong>835</strong> Games 
+  </div>
+</div>
+
+              
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-5">
+              <h2 class="champion-stats">Most Frequent Starters</h2>
+<div class="build-wrapper">
+  
+    <a href="http://leagueoflegends.wikia.com/wiki/Total Biscuit of Rejuvenation" rel="nofollow" target="_blank">
+      <img src="//ddragon.leagueoflegends.com/cdn/6.9.1/img/item/2010.png" class="possible-build" tooltip="Total Biscuit of Rejuvenation"/>
+    </a>
+  
+    <a href="http://leagueoflegends.wikia.com/wiki/Total Biscuit of Rejuvenation" rel="nofollow" target="_blank">
+      <img src="//ddragon.leagueoflegends.com/cdn/6.9.1/img/item/2010.png" class="possible-build" tooltip="Total Biscuit of Rejuvenation"/>
+    </a>
+  
+    <a href="http://leagueoflegends.wikia.com/wiki/Total Biscuit of Rejuvenation" rel="nofollow" target="_blank">
+      <img src="//ddragon.leagueoflegends.com/cdn/6.9.1/img/item/2010.png" class="possible-build" tooltip="Total Biscuit of Rejuvenation"/>
+    </a>
+  
+    <a href="http://leagueoflegends.wikia.com/wiki/Relic Shield" rel="nofollow" target="_blank">
+      <img src="//ddragon.leagueoflegends.com/cdn/6.9.1/img/item/3302.png" class="possible-build" tooltip="Relic Shield"/>
+    </a>
+  
+  <div class="build-text">
+    <strong>53.67%</strong> Win Rate | <strong>39514</strong> Games
+  </div>
+</div>
+<h2 class="champion-stats" style="margin-top:40px">Highest Win % Starters</h2>
+<div class="build-wrapper">
+  
+    <a href="http://leagueoflegends.wikia.com/wiki/Refillable Potion" rel="nofollow" target="_blank">
+      <img src="//ddragon.leagueoflegends.com/cdn/6.9.1/img/item/2031.png" class="possible-build" tooltip="Refillable Potion"/>
+    </a>
+  
+    <a href="http://leagueoflegends.wikia.com/wiki/Relic Shield" rel="nofollow" target="_blank">
+      <img src="//ddragon.leagueoflegends.com/cdn/6.9.1/img/item/3302.png" class="possible-build" tooltip="Relic Shield"/>
+    </a>
+  
+  <div class="build-text">
+    <strong>54.83%</strong> Win Rate | <strong>1995</strong> Games
+  </div>
+</div>  
+            </div>
+          </div>
+          <div class="row">
+            
+               <h2 class="champion-stats">Most Frequent Masteries</h2>
+<div class="mastery-container clearfix">
+  
+    <div class="mastery0">
+      <div class="mastery-header">
+        Ferocity - 0
+      </div>
+      
+        
+        <div class="clearfix mastery-row">
+          
+            
+              
+                <div class="mastery-icon mastery-6111" champion-tip api-type="masteries" api-primary-id="6111">
+                </div>
+              
+              
+                <div class="mastery-spacer"></div>
+              
+            
+          
+            
+          
+            
+              
+                <div class="mastery-icon mastery-6114" champion-tip api-type="masteries" api-primary-id="6114">
+                </div>
+              
+              
+            
+          
+        </div>
+      
+        
+        <div class="clearfix mastery-row">
+          
+            
+              
+                <div class="mastery-icon mastery-6121" champion-tip api-type="masteries" api-primary-id="6121">
+                </div>
+              
+              
+            
+          
+            
+              
+                <div class="mastery-icon mastery-6122" champion-tip api-type="masteries" api-primary-id="6122">
+                </div>
+              
+              
+            
+          
+            
+              
+                <div class="mastery-icon mastery-6123" champion-tip api-type="masteries" api-primary-id="6123">
+                </div>
+              
+              
+            
+          
+        </div>
+      
+        
+        <div class="clearfix mastery-row">
+          
+            
+              
+                <div class="mastery-icon mastery-6131" champion-tip api-type="masteries" api-primary-id="6131">
+                </div>
+              
+              
+                <div class="mastery-spacer"></div>
+              
+            
+          
+            
+          
+            
+              
+                <div class="mastery-icon mastery-6134" champion-tip api-type="masteries" api-primary-id="6134">
+                </div>
+              
+              
+            
+          
+        </div>
+      
+        
+        <div class="clearfix mastery-row">
+          
+            
+              
+                <div class="mastery-icon mastery-6141" champion-tip api-type="masteries" api-primary-id="6141">
+                </div>
+              
+              
+            
+          
+            
+              
+                <div class="mastery-icon mastery-6142" champion-tip api-type="masteries" api-primary-id="6142">
+                </div>
+              
+              
+            
+          
+        </div>
+      
+        
+        <div class="clearfix mastery-row">
+          
+            
+              
+                <div class="mastery-icon mastery-6151" champion-tip api-type="masteries" api-primary-id="6151">
+                </div>
+              
+              
+                <div class="mastery-spacer"></div>
+              
+            
+          
+            
+          
+            
+              
+                <div class="mastery-icon mastery-6154" champion-tip api-type="masteries" api-primary-id="6154">
+                </div>
+              
+              
+            
+          
+        </div>
+      
+        
+        <div class="clearfix mastery-row">
+          
+            
+              
+                <div class="mastery-icon mastery-6161" champion-tip api-type="masteries" api-primary-id="6161">
+                </div>
+              
+              
+            
+          
+            
+              
+                <div class="mastery-icon mastery-6162" champion-tip api-type="masteries" api-primary-id="6162">
+                </div>
+              
+              
+            
+          
+            
+              
+                <div class="mastery-icon mastery-6164" champion-tip api-type="masteries" api-primary-id="6164">
+                </div>
+              
+              
+            
+          
+        </div>
+      
+    </div>
+  
+    <div class="mastery1">
+      <div class="mastery-header">
+        Cunning - 18
+      </div>
+      
+        
+        <div class="clearfix mastery-row">
+          
+            
+              
+                <div class="mastery-icon mastery-6311 mastery-active" champion-tip api-type="masteries" api-primary-id="6311" api-secondary-id="4">
+                  <div class="points">
+                    
+                      <div class="point"></div>
+                    
+                      <div class="point"></div>
+                    
+                      <div class="point"></div>
+                    
+                      <div class="point"></div>
+                    
+                      <div class="point"></div>
+                    
+                   </div>
+                </div>
+              
+              
+                <div class="mastery-spacer"></div>
+              
+            
+          
+            
+          
+            
+              
+                <div class="mastery-icon mastery-6312" champion-tip api-type="masteries" api-primary-id="6312">
+                </div>
+              
+              
+            
+          
+        </div>
+      
+        
+        <div class="clearfix mastery-row">
+          
+            
+              
+                <div class="mastery-icon mastery-6321" champion-tip api-type="masteries" api-primary-id="6321">
+                </div>
+              
+              
+            
+          
+            
+              
+                <div class="mastery-icon mastery-6322 mastery-active" champion-tip api-type="masteries" api-primary-id="6322" api-secondary-id="0">
+                  <div class="points">
+                    
+                      <div class="point"></div>
+                    
+                   </div>
+                </div>
+              
+              
+            
+          
+            
+              
+                <div class="mastery-icon mastery-6323" champion-tip api-type="masteries" api-primary-id="6323">
+                </div>
+              
+              
+            
+          
+        </div>
+      
+        
+        <div class="clearfix mastery-row">
+          
+            
+              
+                <div class="mastery-icon mastery-6331" champion-tip api-type="masteries" api-primary-id="6331">
+                </div>
+              
+              
+                <div class="mastery-spacer"></div>
+              
+            
+          
+            
+          
+            
+              
+                <div class="mastery-icon mastery-6332 mastery-active" champion-tip api-type="masteries" api-primary-id="6332" api-secondary-id="4">
+                  <div class="points">
+                    
+                      <div class="point"></div>
+                    
+                      <div class="point"></div>
+                    
+                      <div class="point"></div>
+                    
+                      <div class="point"></div>
+                    
+                      <div class="point"></div>
+                    
+                   </div>
+                </div>
+              
+              
+            
+          
+        </div>
+      
+        
+        <div class="clearfix mastery-row">
+          
+            
+              
+                <div class="mastery-icon mastery-6342 mastery-active" champion-tip api-type="masteries" api-primary-id="6342" api-secondary-id="0">
+                  <div class="points">
+                    
+                      <div class="point"></div>
+                    
+                   </div>
+                </div>
+              
+              
+            
+          
+            
+              
+                <div class="mastery-icon mastery-6343" champion-tip api-type="masteries" api-primary-id="6343">
+                </div>
+              
+              
+            
+          
+        </div>
+      
+        
+        <div class="clearfix mastery-row">
+          
+            
+              
+                <div class="mastery-icon mastery-6351" champion-tip api-type="masteries" api-primary-id="6351">
+                </div>
+              
+              
+                <div class="mastery-spacer"></div>
+              
+            
+          
+            
+          
+            
+              
+                <div class="mastery-icon mastery-6352 mastery-active" champion-tip api-type="masteries" api-primary-id="6352" api-secondary-id="4">
+                  <div class="points">
+                    
+                      <div class="point"></div>
+                    
+                      <div class="point"></div>
+                    
+                      <div class="point"></div>
+                    
+                      <div class="point"></div>
+                    
+                      <div class="point"></div>
+                    
+                   </div>
+                </div>
+              
+              
+            
+          
+        </div>
+      
+        
+        <div class="clearfix mastery-row">
+          
+            
+              
+                <div class="mastery-icon mastery-6361" champion-tip api-type="masteries" api-primary-id="6361">
+                </div>
+              
+              
+            
+          
+            
+              
+                <div class="mastery-icon mastery-6362 mastery-active" champion-tip api-type="masteries" api-primary-id="6362" api-secondary-id="0">
+                  <div class="points">
+                    
+                      <div class="point"></div>
+                    
+                   </div>
+                </div>
+              
+              
+            
+          
+            
+              
+                <div class="mastery-icon mastery-6363" champion-tip api-type="masteries" api-primary-id="6363">
+                </div>
+              
+              
+            
+          
+        </div>
+      
+    </div>
+  
+    <div class="mastery2">
+      <div class="mastery-header">
+        Resolve - 12
+      </div>
+      
+        
+        <div class="clearfix mastery-row">
+          
+            
+              
+                <div class="mastery-icon mastery-6211 mastery-active" champion-tip api-type="masteries" api-primary-id="6211" api-secondary-id="4">
+                  <div class="points">
+                    
+                      <div class="point"></div>
+                    
+                      <div class="point"></div>
+                    
+                      <div class="point"></div>
+                    
+                      <div class="point"></div>
+                    
+                      <div class="point"></div>
+                    
+                   </div>
+                </div>
+              
+              
+                <div class="mastery-spacer"></div>
+              
+            
+          
+            
+          
+            
+              
+                <div class="mastery-icon mastery-6212" champion-tip api-type="masteries" api-primary-id="6212">
+                </div>
+              
+              
+            
+          
+        </div>
+      
+        
+        <div class="clearfix mastery-row">
+          
+            
+              
+                <div class="mastery-icon mastery-6221" champion-tip api-type="masteries" api-primary-id="6221">
+                </div>
+              
+              
+            
+          
+            
+              
+                <div class="mastery-icon mastery-6223 mastery-active" champion-tip api-type="masteries" api-primary-id="6223" api-secondary-id="0">
+                  <div class="points">
+                    
+                      <div class="point"></div>
+                    
+                   </div>
+                </div>
+              
+              
+            
+          
+        </div>
+      
+        
+        <div class="clearfix mastery-row">
+          
+            
+              
+                <div class="mastery-icon mastery-6231" champion-tip api-type="masteries" api-primary-id="6231">
+                </div>
+              
+              
+                <div class="mastery-spacer"></div>
+              
+            
+          
+            
+          
+            
+              
+                <div class="mastery-icon mastery-6232 mastery-active" champion-tip api-type="masteries" api-primary-id="6232" api-secondary-id="4">
+                  <div class="points">
+                    
+                      <div class="point"></div>
+                    
+                      <div class="point"></div>
+                    
+                      <div class="point"></div>
+                    
+                      <div class="point"></div>
+                    
+                      <div class="point"></div>
+                    
+                   </div>
+                </div>
+              
+              
+            
+          
+        </div>
+      
+        
+        <div class="clearfix mastery-row">
+          
+            
+              
+                <div class="mastery-icon mastery-6241 mastery-active" champion-tip api-type="masteries" api-primary-id="6241" api-secondary-id="0">
+                  <div class="points">
+                    
+                      <div class="point"></div>
+                    
+                   </div>
+                </div>
+              
+              
+            
+          
+            
+              
+                <div class="mastery-icon mastery-6242" champion-tip api-type="masteries" api-primary-id="6242">
+                </div>
+              
+              
+            
+          
+        </div>
+      
+        
+        <div class="clearfix mastery-row">
+          
+            
+              
+                <div class="mastery-icon mastery-6251" champion-tip api-type="masteries" api-primary-id="6251">
+                </div>
+              
+              
+                <div class="mastery-spacer"></div>
+              
+            
+          
+            
+          
+            
+              
+                <div class="mastery-icon mastery-6252" champion-tip api-type="masteries" api-primary-id="6252">
+                </div>
+              
+              
+            
+          
+        </div>
+      
+        
+        <div class="clearfix mastery-row">
+          
+            
+              
+                <div class="mastery-icon mastery-6261" champion-tip api-type="masteries" api-primary-id="6261">
+                </div>
+              
+              
+            
+          
+            
+              
+                <div class="mastery-icon mastery-6262" champion-tip api-type="masteries" api-primary-id="6262">
+                </div>
+              
+              
+            
+          
+            
+              
+                <div class="mastery-icon mastery-6263" champion-tip api-type="masteries" api-primary-id="6263">
+                </div>
+              
+              
+            
+          
+        </div>
+      
+    </div>
+  
+</div>
+<div class="build-text">
+  <strong>54.5%</strong> Win Rate | <strong>1877</strong> Games
+</div>
+
+
+<h2 class="champion-stats">Highest Win % Masteries</h2>
+<div class="mastery-container clearfix">
+  
+    <div class="mastery0">
+      <div class="mastery-header">
+        Ferocity - 0
+      </div>
+      
+        
+        <div class="clearfix mastery-row">
+          
+            
+              
+                <div class="mastery-icon mastery-6111" champion-tip api-type="masteries" api-primary-id="6111">
+                </div>
+              
+              
+                <div class="mastery-spacer"></div>
+              
+            
+          
+            
+          
+            
+              
+                <div class="mastery-icon mastery-6114" champion-tip api-type="masteries" api-primary-id="6114">
+                </div>
+              
+              
+            
+          
+        </div>
+      
+        
+        <div class="clearfix mastery-row">
+          
+            
+              
+                <div class="mastery-icon mastery-6121" champion-tip api-type="masteries" api-primary-id="6121">
+                </div>
+              
+              
+            
+          
+            
+              
+                <div class="mastery-icon mastery-6122" champion-tip api-type="masteries" api-primary-id="6122">
+                </div>
+              
+              
+            
+          
+            
+              
+                <div class="mastery-icon mastery-6123" champion-tip api-type="masteries" api-primary-id="6123">
+                </div>
+              
+              
+            
+          
+        </div>
+      
+        
+        <div class="clearfix mastery-row">
+          
+            
+              
+                <div class="mastery-icon mastery-6131" champion-tip api-type="masteries" api-primary-id="6131">
+                </div>
+              
+              
+                <div class="mastery-spacer"></div>
+              
+            
+          
+            
+          
+            
+              
+                <div class="mastery-icon mastery-6134" champion-tip api-type="masteries" api-primary-id="6134">
+                </div>
+              
+              
+            
+          
+        </div>
+      
+        
+        <div class="clearfix mastery-row">
+          
+            
+              
+                <div class="mastery-icon mastery-6141" champion-tip api-type="masteries" api-primary-id="6141">
+                </div>
+              
+              
+            
+          
+            
+              
+                <div class="mastery-icon mastery-6142" champion-tip api-type="masteries" api-primary-id="6142">
+                </div>
+              
+              
+            
+          
+        </div>
+      
+        
+        <div class="clearfix mastery-row">
+          
+            
+              
+                <div class="mastery-icon mastery-6151" champion-tip api-type="masteries" api-primary-id="6151">
+                </div>
+              
+              
+                <div class="mastery-spacer"></div>
+              
+            
+          
+            
+          
+            
+              
+                <div class="mastery-icon mastery-6154" champion-tip api-type="masteries" api-primary-id="6154">
+                </div>
+              
+              
+            
+          
+        </div>
+      
+        
+        <div class="clearfix mastery-row">
+          
+            
+              
+                <div class="mastery-icon mastery-6161" champion-tip api-type="masteries" api-primary-id="6161">
+                </div>
+              
+              
+            
+          
+            
+              
+                <div class="mastery-icon mastery-6162" champion-tip api-type="masteries" api-primary-id="6162">
+                </div>
+              
+              
+            
+          
+            
+              
+                <div class="mastery-icon mastery-6164" champion-tip api-type="masteries" api-primary-id="6164">
+                </div>
+              
+              
+            
+          
+        </div>
+      
+    </div>
+  
+    <div class="mastery1">
+      <div class="mastery-header">
+        Cunning - 12
+      </div>
+      
+        
+        <div class="clearfix mastery-row">
+          
+            
+              
+                <div class="mastery-icon mastery-6311 mastery-active" champion-tip api-type="masteries" api-primary-id="6311" api-secondary-id="4">
+                  <div class="points">
+                    
+                      <div class="point"></div>
+                    
+                      <div class="point"></div>
+                    
+                      <div class="point"></div>
+                    
+                      <div class="point"></div>
+                    
+                      <div class="point"></div>
+                    
+                   </div>
+                </div>
+              
+              
+                <div class="mastery-spacer"></div>
+              
+            
+          
+            
+          
+            
+              
+                <div class="mastery-icon mastery-6312" champion-tip api-type="masteries" api-primary-id="6312">
+                </div>
+              
+              
+            
+          
+        </div>
+      
+        
+        <div class="clearfix mastery-row">
+          
+            
+              
+                <div class="mastery-icon mastery-6321" champion-tip api-type="masteries" api-primary-id="6321">
+                </div>
+              
+              
+            
+          
+            
+              
+                <div class="mastery-icon mastery-6322 mastery-active" champion-tip api-type="masteries" api-primary-id="6322" api-secondary-id="0">
+                  <div class="points">
+                    
+                      <div class="point"></div>
+                    
+                   </div>
+                </div>
+              
+              
+            
+          
+            
+              
+                <div class="mastery-icon mastery-6323" champion-tip api-type="masteries" api-primary-id="6323">
+                </div>
+              
+              
+            
+          
+        </div>
+      
+        
+        <div class="clearfix mastery-row">
+          
+            
+              
+                <div class="mastery-icon mastery-6331" champion-tip api-type="masteries" api-primary-id="6331">
+                </div>
+              
+              
+                <div class="mastery-spacer"></div>
+              
+            
+          
+            
+          
+            
+              
+                <div class="mastery-icon mastery-6332 mastery-active" champion-tip api-type="masteries" api-primary-id="6332" api-secondary-id="4">
+                  <div class="points">
+                    
+                      <div class="point"></div>
+                    
+                      <div class="point"></div>
+                    
+                      <div class="point"></div>
+                    
+                      <div class="point"></div>
+                    
+                      <div class="point"></div>
+                    
+                   </div>
+                </div>
+              
+              
+            
+          
+        </div>
+      
+        
+        <div class="clearfix mastery-row">
+          
+            
+              
+                <div class="mastery-icon mastery-6342 mastery-active" champion-tip api-type="masteries" api-primary-id="6342" api-secondary-id="0">
+                  <div class="points">
+                    
+                      <div class="point"></div>
+                    
+                   </div>
+                </div>
+              
+              
+            
+          
+            
+              
+                <div class="mastery-icon mastery-6343" champion-tip api-type="masteries" api-primary-id="6343">
+                </div>
+              
+              
+            
+          
+        </div>
+      
+        
+        <div class="clearfix mastery-row">
+          
+            
+              
+                <div class="mastery-icon mastery-6351" champion-tip api-type="masteries" api-primary-id="6351">
+                </div>
+              
+              
+                <div class="mastery-spacer"></div>
+              
+            
+          
+            
+          
+            
+              
+                <div class="mastery-icon mastery-6352" champion-tip api-type="masteries" api-primary-id="6352">
+                </div>
+              
+              
+            
+          
+        </div>
+      
+        
+        <div class="clearfix mastery-row">
+          
+            
+              
+                <div class="mastery-icon mastery-6361" champion-tip api-type="masteries" api-primary-id="6361">
+                </div>
+              
+              
+            
+          
+            
+              
+                <div class="mastery-icon mastery-6362" champion-tip api-type="masteries" api-primary-id="6362">
+                </div>
+              
+              
+            
+          
+            
+              
+                <div class="mastery-icon mastery-6363" champion-tip api-type="masteries" api-primary-id="6363">
+                </div>
+              
+              
+            
+          
+        </div>
+      
+    </div>
+  
+    <div class="mastery2">
+      <div class="mastery-header">
+        Resolve - 18
+      </div>
+      
+        
+        <div class="clearfix mastery-row">
+          
+            
+              
+                <div class="mastery-icon mastery-6211 mastery-active" champion-tip api-type="masteries" api-primary-id="6211" api-secondary-id="4">
+                  <div class="points">
+                    
+                      <div class="point"></div>
+                    
+                      <div class="point"></div>
+                    
+                      <div class="point"></div>
+                    
+                      <div class="point"></div>
+                    
+                      <div class="point"></div>
+                    
+                   </div>
+                </div>
+              
+              
+                <div class="mastery-spacer"></div>
+              
+            
+          
+            
+          
+            
+              
+                <div class="mastery-icon mastery-6212" champion-tip api-type="masteries" api-primary-id="6212">
+                </div>
+              
+              
+            
+          
+        </div>
+      
+        
+        <div class="clearfix mastery-row">
+          
+            
+              
+                <div class="mastery-icon mastery-6221 mastery-active" champion-tip api-type="masteries" api-primary-id="6221" api-secondary-id="0">
+                  <div class="points">
+                    
+                      <div class="point"></div>
+                    
+                   </div>
+                </div>
+              
+              
+            
+          
+            
+              
+                <div class="mastery-icon mastery-6223" champion-tip api-type="masteries" api-primary-id="6223">
+                </div>
+              
+              
+            
+          
+        </div>
+      
+        
+        <div class="clearfix mastery-row">
+          
+            
+              
+                <div class="mastery-icon mastery-6231" champion-tip api-type="masteries" api-primary-id="6231">
+                </div>
+              
+              
+                <div class="mastery-spacer"></div>
+              
+            
+          
+            
+          
+            
+              
+                <div class="mastery-icon mastery-6232 mastery-active" champion-tip api-type="masteries" api-primary-id="6232" api-secondary-id="4">
+                  <div class="points">
+                    
+                      <div class="point"></div>
+                    
+                      <div class="point"></div>
+                    
+                      <div class="point"></div>
+                    
+                      <div class="point"></div>
+                    
+                      <div class="point"></div>
+                    
+                   </div>
+                </div>
+              
+              
+            
+          
+        </div>
+      
+        
+        <div class="clearfix mastery-row">
+          
+            
+              
+                <div class="mastery-icon mastery-6241 mastery-active" champion-tip api-type="masteries" api-primary-id="6241" api-secondary-id="0">
+                  <div class="points">
+                    
+                      <div class="point"></div>
+                    
+                   </div>
+                </div>
+              
+              
+            
+          
+            
+              
+                <div class="mastery-icon mastery-6242" champion-tip api-type="masteries" api-primary-id="6242">
+                </div>
+              
+              
+            
+          
+        </div>
+      
+        
+        <div class="clearfix mastery-row">
+          
+            
+              
+                <div class="mastery-icon mastery-6251 mastery-active" champion-tip api-type="masteries" api-primary-id="6251" api-secondary-id="4">
+                  <div class="points">
+                    
+                      <div class="point"></div>
+                    
+                      <div class="point"></div>
+                    
+                      <div class="point"></div>
+                    
+                      <div class="point"></div>
+                    
+                      <div class="point"></div>
+                    
+                   </div>
+                </div>
+              
+              
+                <div class="mastery-spacer"></div>
+              
+            
+          
+            
+          
+            
+              
+                <div class="mastery-icon mastery-6252" champion-tip api-type="masteries" api-primary-id="6252">
+                </div>
+              
+              
+            
+          
+        </div>
+      
+        
+        <div class="clearfix mastery-row">
+          
+            
+              
+                <div class="mastery-icon mastery-6261" champion-tip api-type="masteries" api-primary-id="6261">
+                </div>
+              
+              
+            
+          
+            
+              
+                <div class="mastery-icon mastery-6262 mastery-active" champion-tip api-type="masteries" api-primary-id="6262" api-secondary-id="0">
+                  <div class="points">
+                    
+                      <div class="point"></div>
+                    
+                   </div>
+                </div>
+              
+              
+            
+          
+            
+              
+                <div class="mastery-icon mastery-6263" champion-tip api-type="masteries" api-primary-id="6263">
+                </div>
+              
+              
+            
+          
+        </div>
+      
+    </div>
+  
+</div>
+<div class="build-text">
+  <strong>62.17%</strong> Win Rate | <strong>193</strong> Games
+</div>
+ 
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="matchups">
+    <div class="container-fluid"  ng-controller="matchupData">
+  
+  <div class="matchup-wrapper">
+    <div class="matchup-settings">
+      <span>Display matchups with at least</span> 
+      <select class="minimum-games" ng-change="saveMinGames()" ng-model="minGames">
+        <option value="0">Show All</option>
+        <option value="100">100+</option>
+        <option value="250">250+</option>
+        <option value="500">500+</option>
+        <option value="1000">1000+</option>
+        <option value="10000">10000+</option>
+      </select>
+      <span>games.</span>
+    </div>
+  </div>
+
+  <div class="row counter-row">
+
+    <div class="col-xs-12 col-sm-12 col-md-6 counter-column">
+      <div class="matchup-header">
+        <h2>Support Champions that Counter Blitzcrank</h2>
+        <span class="glyphicon glyphicon-question-sign" tooltip="The coloured bars below show Blitzcrank's performance in the matchup. Red = Weak, Yellow = Even, Green = Strong."></span>
+      </div>
+      <filters matchup-type="matchups"></filters>
+      <matchups order="" matchup-type="matchups"></matchups>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-6">
+      <div class="matchup-header">
+        <h2>Support Champions that Blitzcrank Counters</h2> 
+        <span class="glyphicon glyphicon-question-sign" tooltip="The coloured bars below show Blitzcrank's performance in the matchup. Green = Strong, Yellow = Even, Red = Weak."></span>
+      </div>
+      <filters matchup-type="matchups"></filters>
+      <matchups order="-" matchup-type="matchups"></matchups>
+    </div>
+
+  </div>
+
+  
+
+    <div class="row counter-row">
+      <div class="col-xs-12 col-sm-12 col-md-6 counter-column">
+        <div class="matchup-header">
+          <h2> ADC  Champions that Counter Blitzcrank</h2>
+        </div>
+        <filters matchup-type="adcsupport"></filters>
+        <matchups order="" matchup-type="adcsupport"></matchups>
+      </div>
+
+      <div class="col-xs-12 col-sm-12 col-md-6">
+        <div class="matchup-header">
+          <h2> ADC  Champions that Blitzcrank Counters</h2>
+        </div>
+        <filters matchup-type="adcsupport"></filters>
+        <matchups order="-" matchup-type="adcsupport"></matchups>
+      </div>
+    </div>
+
+    <div class="row counter-row">
+      <div class="col-xs-12 col-sm-12 col-md-6 counter-column">
+        <div class="matchup-header">
+          <h2> ADC  Champions that Synergise poorly with Blitzcrank</h2>
+        </div>
+        <filters matchup-type="synergy"></filters>
+        <matchups order="" matchup-type="synergy"></matchups>
+      </div>
+
+      <div class="col-xs-12 col-sm-12 col-md-6">
+        <div class="matchup-header">
+          <h2> ADC  Champions that Synergise well with Blitzcrank</h2>
+        </div>
+        <filters matchup-type="synergy"></filters>
+        <matchups order="-" matchup-type="synergy"></matchups>
+      </div>
+    </div>
+
+  
+
+</div>
+  
+<script type="text/ng-template" id="filters.html">
+  <div class="clearfix">
+    <div class="search-sorter">
+      <input class="matchupSearch" type="text" ng-model="search[matchupType].name" ng-model-options="{debounce: 30}" placeholder="Search By Name" />
+    </div>
+    <div ng-click="saveSort('statScore')" class="stat-sorter" ng-class="{'selected-sorter': sortExpression.sortBy === 'statScore'}">
+      Statistical Rating <span class="glyphicon glyphicon-question-sign" tooltip="Statistical rating takes more than win rate into account. Click the graph button under the champion name for more details."></span>
+    </div>
+    <div ng-click="saveSort('winRate')" class="winrate-sorter" ng-class="{'selected-sorter': sortExpression.sortBy === 'winRate'}">
+      {{champion.name}} Win Rate
+    </div>
+  </div>
+</script>
+
+
+
+<script type="text/ng-template" id="matchups.html">
+
+<div ng-repeat="matchup in filtered[matchupType] = (allMatchups[matchupType] | orderBy:[order+sortExpression.sortBy,order+'overallScore'] | startsWith:search[matchupType].name | filter:matchAmount) | limitTo:itemsLimit(matchupType,order)" ng-controller="specificMatchup" class="animate-repeat" ng-class="{'left': order === '', 'right': order === '-'}">  
+  <div class="row counter-matchups">
+
+    <div class="matchup-champion-info">
+      <a href="/champion/{{matchup.key}}/{{generateChampUrl(matchupType)}}">
+        <div class="matchup-champion {{matchup.key}}"></div>
+        <h3>{{matchup.name}}</h3>
+      </a>
+      <span class="glyphicon glyphicon-stats view-more-stats" tooltip="View Indepth Stats" ng-click="toggleMatchup(matchupType, matchup.key)"></span>
+      <span class="glyphicon glyphicon-comment view-more-comment" tooltip="View Discussion" ng-click="matchupDiscussion(matchupType, matchup.key, 'toggle', order)"></span>
+      <a href="{{generateMatchupUrl(matchup.key, matchupType)}}">
+        <span class="glyphicon glyphicon-link view-linked-page" tooltip="View Matchup Page"></span>
+      </a>
+    </div>
+    
+    <div class="matchup-stats">
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" ng-class="{'above-average': matchup.statScore > 6, 'below-average': matchup.statScore < 4, 'average': matchup.statScore >= 4 && matchup.statScore <= 6}" ng-style="{'width': order==='' ? (10-matchup.statScore)*10+'%' : matchup.statScore*10+'%'}">
+        </div>
+      </div>
+      <small><strong>{{matchup.games}}</strong> Games </small>
+    </div>
+    
+    <div class="winrating-area">
+      <strong>{{matchup.winRate}}%</strong>
+    </div>
+  </div>
+
+  <div class="row" ng-if="matchupType === 'matchups' && showMatchups && matchupRetrieved">
+    <div class="col-xxs-12 col-xs-6">
+      <h4 ng-if="showMatchups && matchupRetrieved"> Matchup Performance </h4>
+      <div class="middle-graphic-holder">
+        <canvas ng-if="showMatchups && matchupRetrieved" tc-chartjs-radar chart-data="champComparison.data" chart-options="champComparison.settings" chart-legend="championMatchup" height="400" width="560"></canvas>
+      </div> 
+    </div>
+    <ul class="radar-legend visible-xxs">
+      <li><span class="magic-dmg"></span>{{champion.name}}</li>
+      <li><span class="physical-dmg"></span>{{matchup.name}}</li>
+    </ul>
+    <div class="col-xxs-12 col-xs-6">
+      <h4 ng-if="showMatchups && matchupRetrieved"> Gold Over Time </h4>
+      <div class="middle-graphic-holder">
+        <canvas ng-if="showMatchups && matchupRetrieved" tc-chartjs-line chart-data="goldIncome.data" chart-options="goldIncome.settings" height="400" width="560"> </canvas>
+      </div>
+    </div>
+    <ul class="radar-legend">
+      <li><span class="magic-dmg"></span>{{champion.name}}</li>
+      <li><span class="physical-dmg"></span>{{matchup.name}}</li>
+    </ul>
+  </div>
+
+  <div class="row chart-area matchup-stat-area" ng-if="showMatchups">
+    <div class="loading-symbol" ng-if="!matchupRetrieved">Loading...</div>
+
+    <div class="col-xs-12 col-sm-12 col-md-12" ng-if="matchupRetrieved">
+      <div class="matchup-title-width matchup-div-header"></div>
+      <div class="matchup-champ-img-width matchup-div-header">
+        <div class="matchup-champion matchup-table {{champion.key}}"></div>
+      </div>
+      <div class="matchup-champ-img-width matchup-div-header">
+        <div class="matchup-champion matchup-table {{matchup.key}}"></div>
+      </div>
+      
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th class="matchup-title-width" >Type</th>
+            <th class="matchup-values-width">Matchup Average</th>
+            <th class="matchup-values-width">Change</th>
+            <th class="matchup-values-width">Matchup Average</th>
+            <th class="matchup-values-width">Change</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="matchupInfo in matchup.specificMatchup.general">
+            <td class="matchup-title-width">
+              {{matchupInfo.title}}
+            </td>
+            <td class="matchup-values-width">
+              {{matchupInfo[champtype(matchup.key, true)].val}}<span ng-if="$index===0">%</span>
+            </td>
+            <td class="matchup-values-width"> 
+              <span class="glyphicon {{matchupInfo.title}}-title" ng-class="{'glyphicon-arrow-up': matchupInfo[champtype(matchup.key, true)].change > (0), 'glyphicon-arrow-down': matchupInfo[champtype(matchup.key, true)].change < 0}"></span>
+              {{Math.abs(matchupInfo[champtype(matchup.key, true)].change)}}
+            </td>
+            <td class="matchup-values-width">
+              {{matchupInfo[champtype(matchup.key)].val}}<span ng-if="$index===0">%</span>
+            </td>
+            <td class="matchup-values-width">
+              <span class="glyphicon {{matchupInfo.title}}-title" ng-class="{'glyphicon-arrow-up': matchupInfo[champtype(matchup.key)].change > (0), 'glyphicon-arrow-down': matchupInfo[champtype(matchup.key)].change < 0}"></span>
+              {{Math.abs(matchupInfo[champtype(matchup.key)].change)}}</small>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="row" ng-if="matchupDiscussion(matchupType, matchup.key, 'bind', order)">
+    <disqus disqus-shortname="championgg" disqus-identifier="{{generateMatchupUrl(matchup.key, matchupType)}}" disqus-url="http://champion.gg{{generateMatchupUrl(matchup.key, matchupType)}}" disqus-id="{{matchupDiscussion(matchupType, matchup.key, 'id', order)}}" ready-to-bind="{{matchupDiscussion(matchupType, matchup.key, 'bind', order)}}" ></disqus>
+  </div>
+</div>
+<div class="show-more" ng-if="hasMoreItemsToShow(matchupType,order)" ng-click="showMoreItems(matchupType,order)">
+  <small>{{itemsLimit(matchupType,order)}} / {{matchupsCount(matchupType)}} - </small><strong>Show More</strong> 
+</div>
+</script>  
+  </div> 
+
+  <div class="champion-area">
+    <div class="container-fluid">
+      <div class="row counter-row">
+        <div class="col-xs-12 col-md-6">
+         <h2> Advertising Support </h2>  
+<div class="advert-holder" style="margin:auto;margin-left:15px">
+  <div style="float:left; width:300px;">
+    <!-- /22280732/ChampionGG_300x250_Champion_BTF1 -->
+    <div id='div-gpt-ad-1443488528500-2'>
+    <script type='text/javascript'>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1443488528500-2'); });
+    </script>
+    </div>
+  </div>
+
+  <div style="float:right; width:300px;">
+    <!-- /22280732/ChampionGG_300x250_Champion_BTF2 -->
+    <div id='div-gpt-ad-1443488528500-3'>
+    <script type='text/javascript'>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1443488528500-3'); });
+    </script>
+    </div>
+  </div>
+  
+  <div style="clear:both"></div>
+</div>
+
+        </div>
+        <div class="col-xs-12 col-md-6" ng-controller="reddit">
+         <h2> Recent Blitzcrank Threads on Reddit </h2>
+<div ng-repeat="thread in redditData | filter:enoughUpvotes | limitTo:5" ng-controller="redditThread">
+  <div class="container-reddit">
+    <div class="reddit-titles">
+      <h4>
+        <a href="{{thread.data.url}}" target="_blank">
+          {{thread.data.title}}
+        </a>
+      </h4>
+      <span ng-click="toggleSummary()" class="reddit-summary">
+        View Summary<span ng-if="!summaryVisible">&#x25B6</span><span ng-if="summaryVisible">&#x25BC</span>
+      </span>
+      <a href="{{thread.data.url}}" target="_blank" class="reddit-comments">
+        {{thread.data.num_comments}} comments.
+      </a>
+      <small class="reddit-date">
+        Created on <strong>{{thread.data.created * 1000 | date:'d MMMM yyyy'}}</strong>
+      </small>
+    </div>
+    <div ng-if="summaryVisible" class="reddit-summary-area">
+      <div ng-bind-html="thread.data.selftext_html | to_trusted"></div>
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  matchupData.champion = {"_id":"573a81d5899dffd2227226c1","key":"Blitzcrank","lastUpdated":1463409500631,"name":"Blitzcrank","roles":[{"title":"Support","role":"DUO_SUPPORT","percentPlayed":91.99,"games":51593,"_id":"573a81d076bc68ac0788a497"}],"role":"DUO_SUPPORT","roleTitle":"Support"};
+  matchupData.generalRole = {"_id":"573a81c8899dffd22272116f","role":"DUO_SUPPORT","matrixData":[49.82,10048.66,12.88,5.81,5010.06,12001.22],"totalNumber":27,"patchPlay":[7.4,7.4,7.4,7.4,7.4],"matrixLabels":["Win Rate","Gold Earned","Assists","Deaths","Heal","Damage Dealt"]};
+  matchupData.championData = {"_id":"573a81c8899dffd2227210a1","key":"Blitzcrank","role":"DUO_SUPPORT","synergy":[{"games":38,"statScore":10.02,"winRate":52.63,"winRateChange":-0.56,"key":"Urgot","_id":"573a81c876bc68ac0787fc23"},{"games":171,"statScore":0.88,"winRate":47.95,"winRateChange":-5.24,"key":"Quinn","_id":"573a81c876bc68ac0787fc22"},{"games":422,"statScore":7.25,"winRate":54.5,"winRateChange":1.31,"key":"Varus","_id":"573a81c876bc68ac0787fc21"},{"games":784,"statScore":7.73,"winRate":54.97,"winRateChange":1.78,"key":"MissFortune","_id":"573a81c876bc68ac0787fc20"},{"games":1090,"statScore":7.9,"winRate":52.2,"winRateChange":-0.99,"key":"Kalista","_id":"573a81c876bc68ac0787fc1f"},{"games":853,"statScore":11.08,"winRate":56.03,"winRateChange":2.84,"key":"KogMaw","_id":"573a81c876bc68ac0787fc1e"},{"games":852,"statScore":4.41,"winRate":46.12,"winRateChange":-7.07,"key":"Corki","_id":"573a81c876bc68ac0787fc1d"},{"games":1171,"statScore":7.18,"winRate":55.67,"winRateChange":2.48,"key":"Ashe","_id":"573a81c876bc68ac0787fc1c"},{"games":1225,"statScore":4.54,"winRate":50.85,"winRateChange":-2.34,"key":"Draven","_id":"573a81c876bc68ac0787fc1b"},{"games":1436,"statScore":11.33,"winRate":58.98,"winRateChange":5.79,"key":"Twitch","_id":"573a81c876bc68ac0787fc1a"},{"games":1726,"statScore":5.33,"winRate":51.21,"winRateChange":-1.98,"key":"Tristana","_id":"573a81c876bc68ac0787fc19"},{"games":2898,"statScore":6.84,"winRate":54.86,"winRateChange":1.67,"key":"Jinx","_id":"573a81c876bc68ac0787fc18"},{"games":3650,"statScore":10.62,"winRate":56.35,"winRateChange":3.16,"key":"Sivir","_id":"573a81c876bc68ac0787fc17"},{"games":3720,"statScore":6.2,"winRate":52.04,"winRateChange":-1.15,"key":"Jhin","_id":"573a81c876bc68ac0787fc16"},{"games":4497,"statScore":6.49,"winRate":53.74,"winRateChange":0.55,"key":"Caitlyn","_id":"573a81c876bc68ac0787fc15"},{"games":5694,"statScore":6.1,"winRate":52.1,"winRateChange":-1.09,"key":"Vayne","_id":"573a81c876bc68ac0787fc14"},{"games":9947,"statScore":4.97,"winRate":52.75,"winRateChange":-0.44,"key":"Ezreal","_id":"573a81c876bc68ac0787fc13"},{"games":10693,"statScore":5.95,"winRate":52.85,"winRateChange":-0.34,"key":"Lucian","_id":"573a81c876bc68ac0787fc12"}],"adcsupport":[{"games":33,"statScore":4.52,"winRate":51.51,"winRateChange":-1.68,"key":"Urgot","_id":"573a81c876bc68ac0787fc11"},{"games":130,"statScore":3.54,"winRate":46.92,"winRateChange":-6.27,"key":"Quinn","_id":"573a81c876bc68ac0787fc10"},{"games":408,"statScore":7.21,"winRate":57.1,"winRateChange":3.91,"key":"Varus","_id":"573a81c876bc68ac0787fc0f"},{"games":778,"statScore":5.3,"winRate":52.57,"winRateChange":-0.62,"key":"MissFortune","_id":"573a81c876bc68ac0787fc0e"},{"games":935,"statScore":5.22,"winRate":53.15,"winRateChange":-0.04,"key":"Kalista","_id":"573a81c876bc68ac0787fc0d"},{"games":1077,"statScore":5.09,"winRate":49.02,"winRateChange":-4.17,"key":"KogMaw","_id":"573a81c876bc68ac0787fc0c"},{"games":730,"statScore":7,"winRate":56.43,"winRateChange":3.24,"key":"Corki","_id":"573a81c876bc68ac0787fc0b"},{"games":1156,"statScore":6.41,"winRate":52.94,"winRateChange":-0.25,"key":"Ashe","_id":"573a81c876bc68ac0787fc0a"},{"games":1161,"statScore":7.09,"winRate":54.6,"winRateChange":1.41,"key":"Draven","_id":"573a81c876bc68ac0787fc09"},{"games":1400,"statScore":4.51,"winRate":47.71,"winRateChange":-5.48,"key":"Twitch","_id":"573a81c876bc68ac0787fc08"},{"games":1562,"statScore":7.13,"winRate":57.17,"winRateChange":3.98,"key":"Tristana","_id":"573a81c876bc68ac0787fc07"},{"games":2404,"statScore":4.58,"winRate":50.95,"winRateChange":-2.24,"key":"Jinx","_id":"573a81c876bc68ac0787fc06"},{"games":3800,"statScore":2.7,"winRate":48.02,"winRateChange":-5.17,"key":"Sivir","_id":"573a81c876bc68ac0787fc05"},{"games":3824,"statScore":5.89,"winRate":54.31,"winRateChange":1.12,"key":"Jhin","_id":"573a81c876bc68ac0787fc04"},{"games":4172,"statScore":6.92,"winRate":53.81,"winRateChange":0.62,"key":"Caitlyn","_id":"573a81c876bc68ac0787fc03"},{"games":5478,"statScore":6.09,"winRate":53.5,"winRateChange":0.31,"key":"Vayne","_id":"573a81c876bc68ac0787fc02"},{"games":9150,"statScore":5.26,"winRate":51.95,"winRateChange":-1.24,"key":"Ezreal","_id":"573a81c876bc68ac0787fc01"},{"games":9902,"statScore":5.09,"winRate":52.79,"winRateChange":-0.4,"key":"Lucian","_id":"573a81c876bc68ac0787fc00"}],"matchups":[{"games":110,"statScore":4.46,"winRate":48.18,"winRateChange":-5.01,"key":"Kennen","_id":"573a81c876bc68ac0787fbff"},{"games":1141,"statScore":5.94,"winRate":54.95,"winRateChange":1.76,"key":"Sona","_id":"573a81c876bc68ac0787fbfe"},{"games":691,"statScore":5.85,"winRate":53.97,"winRateChange":0.78,"key":"TahmKench","_id":"573a81c876bc68ac0787fbfd"},{"games":643,"statScore":5.94,"winRate":53.18,"winRateChange":-0.01,"key":"Zilean","_id":"573a81c876bc68ac0787fbfc"},{"games":1417,"statScore":6.07,"winRate":54.05,"winRateChange":0.86,"key":"Nami","_id":"573a81c876bc68ac0787fbfb"},{"games":180,"statScore":4.72,"winRate":54.44,"winRateChange":1.25,"key":"Poppy","_id":"573a81c876bc68ac0787fbfa"},{"games":875,"statScore":6.56,"winRate":57.71,"winRateChange":4.52,"key":"Karma","_id":"573a81c876bc68ac0787fbf9"},{"games":268,"statScore":7.32,"winRate":59.7,"winRateChange":6.51,"key":"Veigar","_id":"573a81c876bc68ac0787fbf8"},{"games":1004,"statScore":5.77,"winRate":55.47,"winRateChange":2.28,"key":"Lulu","_id":"573a81c876bc68ac0787fbf7"},{"games":853,"statScore":6.95,"winRate":55.56,"winRateChange":2.37,"key":"Velkoz","_id":"573a81c876bc68ac0787fbf6"},{"games":562,"statScore":6.05,"winRate":53.73,"winRateChange":0.54,"key":"Annie","_id":"573a81c876bc68ac0787fbf5"},{"games":415,"statScore":6.89,"winRate":61.2,"winRateChange":8.01,"key":"Lux","_id":"573a81c876bc68ac0787fbf4"},{"games":2442,"statScore":4.09,"winRate":50.81,"winRateChange":-2.38,"key":"Leona","_id":"573a81c876bc68ac0787fbf3"},{"games":2300,"statScore":5.8,"winRate":55.47,"winRateChange":2.28,"key":"Bard","_id":"573a81c876bc68ac0787fbf2"},{"games":1752,"statScore":5.66,"winRate":55.25,"winRateChange":2.06,"key":"Zyra","_id":"573a81c876bc68ac0787fbf1"},{"games":1143,"statScore":3.86,"winRate":49.51,"winRateChange":-3.68,"key":"Nautilus","_id":"573a81c876bc68ac0787fbf0"},{"games":2003,"statScore":4.02,"winRate":49.32,"winRateChange":-3.87,"key":"Taric","_id":"573a81c876bc68ac0787fbef"},{"games":404,"statScore":5.77,"winRate":53.71,"winRateChange":0.52,"key":"Malphite","_id":"573a81c876bc68ac0787fbee"},{"games":3676,"statScore":6.8,"winRate":53.5,"winRateChange":0.31,"key":"Soraka","_id":"573a81c876bc68ac0787fbed"},{"games":1121,"statScore":3.72,"winRate":46.6,"winRateChange":-6.59,"key":"Trundle","_id":"573a81c876bc68ac0787fbec"},{"games":2712,"statScore":4.88,"winRate":50.47,"winRateChange":-2.72,"key":"Janna","_id":"573a81c876bc68ac0787fbeb"},{"games":1023,"statScore":6.29,"winRate":54.44,"winRateChange":1.25,"key":"Brand","_id":"573a81c876bc68ac0787fbea"},{"games":2921,"statScore":4.46,"winRate":52.41,"winRateChange":-0.78,"key":"Morgana","_id":"573a81c876bc68ac0787fbe9"},{"games":3984,"statScore":4.64,"winRate":50.82,"winRateChange":-2.37,"key":"Braum","_id":"573a81c876bc68ac0787fbe8"},{"games":5494,"statScore":4.08,"winRate":48.92,"winRateChange":-4.27,"key":"Alistar","_id":"573a81c876bc68ac0787fbe7"},{"games":7908,"statScore":5.76,"winRate":53.13,"winRateChange":-0.06,"key":"Thresh","_id":"573a81c876bc68ac0787fbe6"}],"unique":null,"runes":{"highestWinPercent":{"games":475,"winPercent":57.68,"runes":[{"id":5257,"number":9,"name":"Greater Mark of Armor","img":"r_1_3.png","description":"+0.91 armor","_id":"573a81c876bc68ac0787fb77"},{"id":5289,"number":9,"name":"Greater Glyph of Magic Resist","img":"b_3_3.png","description":"+1.34 magic resist","_id":"573a81c876bc68ac0787fb76"},{"id":5317,"number":9,"name":"Greater Seal of Armor","img":"y_1_3.png","description":"+1 armor","_id":"573a81c876bc68ac0787fb75"},{"id":5365,"number":3,"name":"Greater Quintessence of Movement Speed","img":"bl_3_3.png","description":"+1.5% movement speed","_id":"573a81c876bc68ac0787fb74"}]},"mostGames":{"games":3278,"winPercent":52.47,"runes":[{"id":5273,"number":9,"name":"Greater Mark of Magic Penetration","img":"r_1_3.png","description":"+0.87 magic penetration","_id":"573a81c876bc68ac0787fb7b"},{"id":5289,"number":9,"name":"Greater Glyph of Magic Resist","img":"b_3_3.png","description":"+1.34 magic resist","_id":"573a81c876bc68ac0787fb7a"},{"id":5317,"number":9,"name":"Greater Seal of Armor","img":"y_1_3.png","description":"+1 armor","_id":"573a81c876bc68ac0787fb79"},{"id":5357,"number":3,"name":"Greater Quintessence of Ability Power","img":"bl_3_3.png","description":"+4.95 ability power","_id":"573a81c876bc68ac0787fb78"}]}},"masteries":{"highestWinPercent":{"games":193,"winPercent":62.17,"masteries":[{"tree":"Ferocity","total":0,"_id":"573a81c876bc68ac0787fb9f","data":{"row6":[{"points":0,"mastery":6161,"_id":"573a81c876bc68ac0787fba2"},{"points":0,"mastery":6162,"_id":"573a81c876bc68ac0787fba1"},{"points":0,"mastery":6164,"_id":"573a81c876bc68ac0787fba0"}],"row5":[{"points":0,"mastery":6151,"_id":"573a81c876bc68ac0787fba5"},{"points":0,"mastery":null,"_id":"573a81c876bc68ac0787fba4"},{"points":0,"mastery":6154,"_id":"573a81c876bc68ac0787fba3"}],"row4":[{"points":0,"mastery":6141,"_id":"573a81c876bc68ac0787fba7"},{"points":0,"mastery":6142,"_id":"573a81c876bc68ac0787fba6"}],"row3":[{"points":0,"mastery":6131,"_id":"573a81c876bc68ac0787fbaa"},{"points":0,"mastery":null,"_id":"573a81c876bc68ac0787fba9"},{"points":0,"mastery":6134,"_id":"573a81c876bc68ac0787fba8"}],"row2":[{"points":0,"mastery":6121,"_id":"573a81c876bc68ac0787fbad"},{"points":0,"mastery":6122,"_id":"573a81c876bc68ac0787fbac"},{"points":0,"mastery":6123,"_id":"573a81c876bc68ac0787fbab"}],"row1":[{"points":0,"mastery":6111,"_id":"573a81c876bc68ac0787fbb0"},{"points":0,"mastery":null,"_id":"573a81c876bc68ac0787fbaf"},{"points":0,"mastery":6114,"_id":"573a81c876bc68ac0787fbae"}]}},{"tree":"Cunning","total":12,"_id":"573a81c876bc68ac0787fb8d","data":{"row6":[{"points":0,"mastery":6361,"_id":"573a81c876bc68ac0787fb90"},{"points":0,"mastery":6362,"_id":"573a81c876bc68ac0787fb8f"},{"points":0,"mastery":6363,"_id":"573a81c876bc68ac0787fb8e"}],"row5":[{"points":0,"mastery":6351,"_id":"573a81c876bc68ac0787fb93"},{"points":0,"mastery":null,"_id":"573a81c876bc68ac0787fb92"},{"points":0,"mastery":6352,"_id":"573a81c876bc68ac0787fb91"}],"row4":[{"points":1,"mastery":6342,"_id":"573a81c876bc68ac0787fb95"},{"points":0,"mastery":6343,"_id":"573a81c876bc68ac0787fb94"}],"row3":[{"points":0,"mastery":6331,"_id":"573a81c876bc68ac0787fb98"},{"points":0,"mastery":null,"_id":"573a81c876bc68ac0787fb97"},{"points":5,"mastery":6332,"_id":"573a81c876bc68ac0787fb96"}],"row2":[{"points":0,"mastery":6321,"_id":"573a81c876bc68ac0787fb9b"},{"points":1,"mastery":6322,"_id":"573a81c876bc68ac0787fb9a"},{"points":0,"mastery":6323,"_id":"573a81c876bc68ac0787fb99"}],"row1":[{"points":5,"mastery":6311,"_id":"573a81c876bc68ac0787fb9e"},{"points":0,"mastery":null,"_id":"573a81c876bc68ac0787fb9d"},{"points":0,"mastery":6312,"_id":"573a81c876bc68ac0787fb9c"}]}},{"tree":"Resolve","total":18,"_id":"573a81c876bc68ac0787fb7c","data":{"row6":[{"points":0,"mastery":6261,"_id":"573a81c876bc68ac0787fb7f"},{"points":1,"mastery":6262,"_id":"573a81c876bc68ac0787fb7e"},{"points":0,"mastery":6263,"_id":"573a81c876bc68ac0787fb7d"}],"row5":[{"points":5,"mastery":6251,"_id":"573a81c876bc68ac0787fb82"},{"points":0,"mastery":null,"_id":"573a81c876bc68ac0787fb81"},{"points":0,"mastery":6252,"_id":"573a81c876bc68ac0787fb80"}],"row4":[{"points":1,"mastery":6241,"_id":"573a81c876bc68ac0787fb84"},{"points":0,"mastery":6242,"_id":"573a81c876bc68ac0787fb83"}],"row3":[{"points":0,"mastery":6231,"_id":"573a81c876bc68ac0787fb87"},{"points":0,"mastery":null,"_id":"573a81c876bc68ac0787fb86"},{"points":5,"mastery":6232,"_id":"573a81c876bc68ac0787fb85"}],"row2":[{"points":1,"mastery":6221,"_id":"573a81c876bc68ac0787fb89"},{"points":0,"mastery":6223,"_id":"573a81c876bc68ac0787fb88"}],"row1":[{"points":5,"mastery":6211,"_id":"573a81c876bc68ac0787fb8c"},{"points":0,"mastery":null,"_id":"573a81c876bc68ac0787fb8b"},{"points":0,"mastery":6212,"_id":"573a81c876bc68ac0787fb8a"}]}}]},"mostGames":{"games":1877,"winPercent":54.5,"masteries":[{"tree":"Ferocity","total":0,"_id":"573a81c876bc68ac0787fbd4","data":{"row6":[{"points":0,"mastery":6161,"_id":"573a81c876bc68ac0787fbd7"},{"points":0,"mastery":6162,"_id":"573a81c876bc68ac0787fbd6"},{"points":0,"mastery":6164,"_id":"573a81c876bc68ac0787fbd5"}],"row5":[{"points":0,"mastery":6151,"_id":"573a81c876bc68ac0787fbda"},{"points":0,"mastery":null,"_id":"573a81c876bc68ac0787fbd9"},{"points":0,"mastery":6154,"_id":"573a81c876bc68ac0787fbd8"}],"row4":[{"points":0,"mastery":6141,"_id":"573a81c876bc68ac0787fbdc"},{"points":0,"mastery":6142,"_id":"573a81c876bc68ac0787fbdb"}],"row3":[{"points":0,"mastery":6131,"_id":"573a81c876bc68ac0787fbdf"},{"points":0,"mastery":null,"_id":"573a81c876bc68ac0787fbde"},{"points":0,"mastery":6134,"_id":"573a81c876bc68ac0787fbdd"}],"row2":[{"points":0,"mastery":6121,"_id":"573a81c876bc68ac0787fbe2"},{"points":0,"mastery":6122,"_id":"573a81c876bc68ac0787fbe1"},{"points":0,"mastery":6123,"_id":"573a81c876bc68ac0787fbe0"}],"row1":[{"points":0,"mastery":6111,"_id":"573a81c876bc68ac0787fbe5"},{"points":0,"mastery":null,"_id":"573a81c876bc68ac0787fbe4"},{"points":0,"mastery":6114,"_id":"573a81c876bc68ac0787fbe3"}]}},{"tree":"Cunning","total":18,"_id":"573a81c876bc68ac0787fbc2","data":{"row6":[{"points":0,"mastery":6361,"_id":"573a81c876bc68ac0787fbc5"},{"points":1,"mastery":6362,"_id":"573a81c876bc68ac0787fbc4"},{"points":0,"mastery":6363,"_id":"573a81c876bc68ac0787fbc3"}],"row5":[{"points":0,"mastery":6351,"_id":"573a81c876bc68ac0787fbc8"},{"points":0,"mastery":null,"_id":"573a81c876bc68ac0787fbc7"},{"points":5,"mastery":6352,"_id":"573a81c876bc68ac0787fbc6"}],"row4":[{"points":1,"mastery":6342,"_id":"573a81c876bc68ac0787fbca"},{"points":0,"mastery":6343,"_id":"573a81c876bc68ac0787fbc9"}],"row3":[{"points":0,"mastery":6331,"_id":"573a81c876bc68ac0787fbcd"},{"points":0,"mastery":null,"_id":"573a81c876bc68ac0787fbcc"},{"points":5,"mastery":6332,"_id":"573a81c876bc68ac0787fbcb"}],"row2":[{"points":0,"mastery":6321,"_id":"573a81c876bc68ac0787fbd0"},{"points":1,"mastery":6322,"_id":"573a81c876bc68ac0787fbcf"},{"points":0,"mastery":6323,"_id":"573a81c876bc68ac0787fbce"}],"row1":[{"points":5,"mastery":6311,"_id":"573a81c876bc68ac0787fbd3"},{"points":0,"mastery":null,"_id":"573a81c876bc68ac0787fbd2"},{"points":0,"mastery":6312,"_id":"573a81c876bc68ac0787fbd1"}]}},{"tree":"Resolve","total":12,"_id":"573a81c876bc68ac0787fbb1","data":{"row6":[{"points":0,"mastery":6261,"_id":"573a81c876bc68ac0787fbb4"},{"points":0,"mastery":6262,"_id":"573a81c876bc68ac0787fbb3"},{"points":0,"mastery":6263,"_id":"573a81c876bc68ac0787fbb2"}],"row5":[{"points":0,"mastery":6251,"_id":"573a81c876bc68ac0787fbb7"},{"points":0,"mastery":null,"_id":"573a81c876bc68ac0787fbb6"},{"points":0,"mastery":6252,"_id":"573a81c876bc68ac0787fbb5"}],"row4":[{"points":1,"mastery":6241,"_id":"573a81c876bc68ac0787fbb9"},{"points":0,"mastery":6242,"_id":"573a81c876bc68ac0787fbb8"}],"row3":[{"points":0,"mastery":6231,"_id":"573a81c876bc68ac0787fbbc"},{"points":0,"mastery":null,"_id":"573a81c876bc68ac0787fbbb"},{"points":5,"mastery":6232,"_id":"573a81c876bc68ac0787fbba"}],"row2":[{"points":0,"mastery":6221,"_id":"573a81c876bc68ac0787fbbe"},{"points":1,"mastery":6223,"_id":"573a81c876bc68ac0787fbbd"}],"row1":[{"points":5,"mastery":6211,"_id":"573a81c876bc68ac0787fbc1"},{"points":0,"mastery":null,"_id":"573a81c876bc68ac0787fbc0"},{"points":0,"mastery":6212,"_id":"573a81c876bc68ac0787fbbf"}]}}]}},"skills":{"highestWinPercent":{"games":17167,"winPercent":53.76,"order":["1","3","2","1","1","4","1","2","1","2","4","2","2","3","3","4","3","3"]},"mostGames":{"games":17167,"winPercent":53.76,"order":["1","3","2","1","1","4","1","2","1","2","4","2","2","3","3","4","3","3"]},"skillInfo":[{"name":"Rocket Grab","img":"RocketGrab.png","key":"Q","_id":"573a81c876bc68ac0787fb73"},{"name":"Overdrive","img":"Overdrive.png","key":"W","_id":"573a81c876bc68ac0787fb72"},{"name":"Power Fist","img":"PowerFist.png","key":"E","_id":"573a81c876bc68ac0787fb71"},{"name":"Static Field","img":"StaticField.png","key":"R","_id":"573a81c876bc68ac0787fb70"}]},"summoners":{"highestWinPercent":{"games":23116,"winPercent":54.74,"summoner2":{"name":"Ignite","url":"SummonerDot.png"},"summoner1":{"name":"Flash","url":"SummonerFlash.png"}},"mostGames":{"games":27799,"winPercent":52.03,"summoner2":{"name":"Flash","url":"SummonerFlash.png"},"summoner1":{"name":"Exhaust","url":"SummonerExhaust.png"}}},"trinkets":[{"games":49601,"winPercent":53.25,"_id":"573a81c876bc68ac0787fb6f","item":{"id":3340,"name":"Warding Totem (Trinket)"}},{"games":130,"winPercent":50.76,"_id":"573a81c876bc68ac0787fb6e","item":{"id":3341,"name":"Sweeping Lens (Trinket)"}}],"firstItems":{"highestWinPercent":{"games":1995,"winPercent":54.83,"items":[{"id":2031,"name":"Refillable Potion","_id":"573a81c876bc68ac0787fb69"},{"id":3302,"name":"Relic Shield","_id":"573a81c876bc68ac0787fb68"}]},"mostGames":{"games":39514,"winPercent":53.67,"items":[{"id":2010,"name":"Total Biscuit of Rejuvenation","_id":"573a81c876bc68ac0787fb6d"},{"id":2010,"name":"Total Biscuit of Rejuvenation","_id":"573a81c876bc68ac0787fb6c"},{"id":2010,"name":"Total Biscuit of Rejuvenation","_id":"573a81c876bc68ac0787fb6b"},{"id":3302,"name":"Relic Shield","_id":"573a81c876bc68ac0787fb6a"}]}},"items":{"highestWinPercent":{"games":835,"winPercent":55.32,"items":[{"id":3009,"name":"Boots of Swiftness","_id":"573a81c876bc68ac0787fb61"},{"id":2049,"name":"Sightstone","_id":"573a81c876bc68ac0787fb60"},{"id":3401,"name":"Face of the Mountain","_id":"573a81c876bc68ac0787fb5f"},{"id":3190,"name":"Locket of the Iron Solari","_id":"573a81c876bc68ac0787fb5e"},{"id":3222,"name":"Mikael's Crucible","_id":"573a81c876bc68ac0787fb5d"},{"id":3026,"name":"Guardian Angel","_id":"573a81c876bc68ac0787fb5c"}]},"mostGames":{"games":2684,"winPercent":51.07,"items":[{"id":2049,"name":"Sightstone","_id":"573a81c876bc68ac0787fb67"},{"id":3117,"name":"Boots of Mobility","_id":"573a81c876bc68ac0787fb66"},{"id":3401,"name":"Face of the Mountain","_id":"573a81c876bc68ac0787fb65"},{"id":3190,"name":"Locket of the Iron Solari","_id":"573a81c876bc68ac0787fb64"},{"id":3110,"name":"Frozen Heart","_id":"573a81c876bc68ac0787fb63"},{"id":3026,"name":"Guardian Angel","_id":"573a81c876bc68ac0787fb62"}]}},"dmgComposition":{"physicalDmg":29.2,"magicDmg":66.8,"trueDmg":4},"patchWin":[52.52,52.66,52.64,52.45,53.19],"experienceSample":[14.16,17.56,31.32,20.67,14.02],"experienceRate":[50.71,52.06,52.88,54.48,56.21],"gameLength":[59.61,55.82,52.41,49.54,48.01],"patchPlay":[13.05,13.18,15.35,15.07,16.1],"championMatrix":[155.46768366118016,81.74616317001473,103.35403726708068,111.15318416523235,63.21457228057148,80.13981911838964],"overallPosition":{"position":5,"change":1},"general":[{"title":"Win Rate","titleLink":"winPercent","val":"53.19","position":1,"change":3,"_id":"573a81c876bc68ac0787fb5b"},{"title":"Play Rate","titleLink":"playPercent","val":"16.1","position":3,"change":2,"_id":"573a81c876bc68ac0787fb5a"},{"title":"Ban Rate","titleLink":"banRate","val":"2.8","position":12,"change":-3,"_id":"573a81c876bc68ac0787fb59"},{"title":"Playerbase Average Games Played","titleLink":"experience","val":"67.94","position":9,"change":0,"_id":"573a81c876bc68ac0787fb58"},{"title":"Gold Earned","titleLink":"goldEarned","val":"9689","position":18,"change":-1,"_id":"573a81c876bc68ac0787fb57"},{"title":"Assists","titleLink":"assists","val":"13","position":16,"change":-1,"_id":"573a81c876bc68ac0787fb56"},{"title":"Deaths","titleLink":"deaths","val":"5.63","position":12,"change":0,"_id":"573a81c876bc68ac0787fb55"},{"title":"Kills","titleLink":"kills","val":"2.43","position":14,"change":0,"_id":"573a81c876bc68ac0787fb54"},{"title":"Heal","titleLink":"totalHeal","val":"3474.25","position":14,"change":1,"_id":"573a81c876bc68ac0787fb53"},{"title":"Pink Wards Bought","titleLink":"visionWardsBoughtInGame","val":"2.39","position":14,"change":1,"_id":"573a81c876bc68ac0787fb52"},{"title":"Wards Placed","titleLink":"wardsPlaced","val":"23.3","position":6,"change":-1,"_id":"573a81c876bc68ac0787fb51"},{"title":"Wards Killed","titleLink":"wardsKilled","val":"4.63","position":18,"change":-1,"_id":"573a81c876bc68ac0787fb50"},{"title":"Damage Dealt","titleLink":"totalDamageDealtToChampions","val":"10015","position":15,"change":0,"_id":"573a81c876bc68ac0787fb4f"}]};
+  matchupData.patchHistory = ["6.5","6.6","6.7","6.8","6.9"];
+  /* Has general data on the chosen champion */
+</script>
+
+	<script src="/js/master.min.js?v=6.9.10.394612"></script>
+
+
+	
+
+<div class="footer-attr">
+Champion.gg isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends. League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc. League of Legends © Riot Games, Inc.
+</div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-64942437-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script>
+
+ga('create', 'UA-45985961-1', 'solomidnetwork.com');
+ga('send', 'pageview');
+
+</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+</div>
+<!-- Quantcast Tag -->
+<script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-gZzLr0R4qLK_S"
+});
+</script>
+
+<noscript>
+<div style="display:none;">
+<img src="//pixel.quantserve.com/pixel/p-gZzLr0R4qLK_S.gif" border="0" height="1" width="1" alt="Quantcast"/>
+</div>
+</noscript>
+<!-- End Quantcast tag -->
+</body>
+</html>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+  [].forEach.call(document.querySelectorAll('.adsbygoogle'), function(){
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  });
+  </script>

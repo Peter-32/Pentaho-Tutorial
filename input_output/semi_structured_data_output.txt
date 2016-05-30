@@ -1,0 +1,53 @@
+prop_code;feature;description
+MCX-011;Status:; Active 
+MCX-011;bedrooms , baths;5,5
+MCX-011;Style:; Contemporary 
+MCX-011;Basement  present;yes
+MCX-011;Laundry room  present;yes
+MCX-011;Fireplace  present;yes
+MCX-011;car garage;2
+MCX-011;Central air conditioning  present;yes
+MCX-011;More Features: Attic, Clothes dryer, Clothes washer, Dishwasher  present;yes
+MCX-012;bedrooms , baths;4,3
+MCX-012;Fireplace  present;yes
+MCX-012;Attached parking  present;yes
+MCX-012;More Features: Alarm System, Eat-in Kitchen, Powder Room present;yes
+MCX-011;Status:; Active 
+MCX-011;bedrooms , baths;5,5
+MCX-011;Style:; Contemporary 
+MCX-011;Basement  present;yes
+MCX-011;Laundry room  present;yes
+MCX-011;Fireplace  present;yes
+MCX-011;car garage;2
+MCX-011;Central air conditioning  present;yes
+MCX-011;More Features: Attic, Clothes dryer, Clothes washer, Dishwasher  present;yes
+MCX-012;bedrooms , baths;4,3
+MCX-012;Fireplace  present;yes
+MCX-012;Attached parking  present;yes
+MCX-012;More Features: Alarm System, Eat-in Kitchen, Powder Room present;yes
+MCX-011;Status:; Active 
+MCX-011;bedrooms , baths;5,5
+MCX-011;Style:; Contemporary 
+MCX-011;Basement  present;yes
+MCX-011;Laundry room  present;yes
+MCX-011;Fireplace  present;yes
+MCX-011;car garage;2
+MCX-011;Central air conditioning  present;yes
+MCX-011;More Features: Attic, Clothes dryer, Clothes washer, Dishwasher  present;yes
+MCX-012;bedrooms , baths;4,3
+MCX-012;Fireplace  present;yes
+MCX-012;Attached parking  present;yes
+MCX-012;More Features: Alarm System, Eat-in Kitchen, Powder Room present;yes
+MCX-011;Status:; Active 
+MCX-011;bedrooms , baths;5,5
+MCX-011;Style:; Contemporary 
+MCX-011;Basement  present;yes
+MCX-011;Laundry room  present;yes
+MCX-011;Fireplace  present;yes
+MCX-011;car garage;2
+MCX-011;Central air conditioning  present;yes
+MCX-011;More Features: Attic, Clothes dryer, Clothes washer, Dishwasher  present;yes
+MCX-012;bedrooms , baths;4,3
+MCX-012;Fireplace  present;yes
+MCX-012;Attached parking  present;yes
+MCX-012;More Features: Alarm System, Eat-in Kitchen, Powder Room present;yes
