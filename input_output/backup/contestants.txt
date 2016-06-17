@@ -1,0 +1,33 @@
+ID;Country Name;Duet
+1; Russia; Mikhail Davydova 
+;; Anastasia Davydova 
+2; Spain; Carmen Rodriguez
+;; Francisco Delgado 
+3; Japan; Natsuki Harada 
+;; Emiko Suzuki 
+4; China; Lin Jiang 
+;; Wei Chiu 
+5; United States; Chelsea Thompson 
+;; Cassandra Sullivan 
+6; Canada; Mackenzie Martin 
+;; Nathan Gauthier 
+7; Italy; Giovanni Lombardi 
+;; Federica Lombardi
+8; Canada; Mackenzie Martin 
+;; Nathan Gauthier 
+9; Italy; Giovanni Lombardi 
+;; Federica Lombardi
+10; China; Lin Jiang 
+;; Wei Chiu 
+11; United States; Chelsea Thompson 
+;; Cassandra Sullivan 
+12; Canada; Mackenzie Martin 
+;; Nathan Gauthier 
+13; Italy; Giovanni Lombardi 
+;; Federica Lombardi
+14; United States; Chelsea Thompson 
+;; Cassandra Sullivan 
+15; Canada; Mackenzie Martin 
+;; Nathan Gauthier 
+16; Italy; Giovanni Lombardi 
+;; Federica Lombardi

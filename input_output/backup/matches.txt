@@ -1,0 +1,41 @@
+region; match_date; type; team; goals 
+europe; 07-09; home; Iceland; 2 
+europe; 07-09; away; Norway; 0 
+europe; 07-09; home; Russia; 2 
+europe; 07-09; away; Northern Ireland; 0 
+europe; 07-09; home; Liechtenstein; 1 
+europe; 07-09; away; Bosnia-Herzegovina; 8 
+europe; 07-09; home; Wales; 0 
+europe; 07-09; away; Belgium; 2 
+europe; 07-09; home; Malta; 0 
+europe; 07-09; away; Armenia; 1
+europe; 07-09; home; Iceland; 2 
+europe; 07-09; away; Norway; 0 
+europe; 07-09; home; Russia; 2 
+europe; 07-09; away; Northern Ireland; 0 
+europe; 07-09; home; Liechtenstein; 1 
+europe; 07-09; away; Bosnia-Herzegovina; 8 
+europe; 07-09; home; Wales; 0 
+europe; 07-09; away; Belgium; 2 
+europe; 07-09; home; Malta; 0 
+europe; 07-09; away; Armenia; 1
+europe; 07-09; home; Iceland; 2 
+europe; 07-09; away; Norway; 0 
+europe; 07-09; home; Russia; 2 
+europe; 07-09; away; Northern Ireland; 0 
+europe; 07-09; home; Liechtenstein; 1 
+europe; 07-09; away; Bosnia-Herzegovina; 8 
+europe; 07-09; home; Wales; 0 
+europe; 07-09; away; Belgium; 2 
+europe; 07-09; home; Malta; 0 
+europe; 07-09; away; Armenia; 1
+europe; 07-09; home; Iceland; 2 
+europe; 07-09; away; Norway; 0 
+europe; 07-09; home; Russia; 2 
+europe; 07-09; away; Northern Ireland; 0 
+europe; 07-09; home; Liechtenstein; 1 
+europe; 07-09; away; Bosnia-Herzegovina; 8 
+europe; 07-09; home; Wales; 0 
+europe; 07-09; away; Belgium; 2 
+europe; 07-09; home; Malta; 0 
+europe; 07-09; away; Armenia; 1
